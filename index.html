@@ -191,10 +191,17 @@
             background: var(--secondary-color); color: white; padding: 16px 40px; 
             text-decoration: none; border-radius: 50px; font-weight: 600; 
             display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
         }
         .btn-main:hover { background: #1e8449; transform: translateY(-3px); }
-        .btn-download { background: var(--primary-color); }
+        .btn-download { background: var(--primary-color); box-shadow: 0 4px 15px rgba(26, 82, 118, 0.4); }
         .btn-download:hover { background: #123b55; }
+        .btn-secondary {
+            background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);
+            padding: 10px 25px; border-radius: 50px; font-weight: 600; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; font-size: 0.9em;
+        }
+        .btn-secondary:hover { background: var(--primary-color); color: white; }
 
         /* --- Extras --- */
         .flyer-box { text-align: center; padding: 30px; background: #f8f9fa; border-radius: 12px; border: 2px dashed #bdc3c7; }
@@ -208,6 +215,7 @@
             .container { padding: 25px; width: 90%; }
             .logos-header { gap: 20px; }
             .logos-header img { height: 60px; }
+            .btn-main { padding: 14px 25px; font-size: 0.9em; }
         }
     </style>
 </head>
@@ -223,7 +231,9 @@
         <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas</h1>
         <span class="hero-badge">Enfoque Integrativo • Primera Cohorte 2026</span>
         <br><br>
-        <a href="#inscripcion" class="btn-main"><i class="fas fa-edit"></i> Inscribirse Ahora</a>
+        <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main">
+            <i class="fas fa-clipboard-check"></i> Realizar Pre-inscripción
+        </a>
     </header>
 
     <div class="container">
@@ -384,10 +394,18 @@
                     <li><i class="fas fa-briefcase-medical"></i> <strong>Seguridad Social:</strong> Indispensable afiliación vigente a salud y ARL para asistentes a prácticas presenciales.</li>
                 </ul>
             </div>
-            <div style="flex: 1; min-width: 300px; text-align: center; background: #f0f8ff; padding: 20px; border-radius: 10px;">
-                <p style="margin-top: 0;">¿Interesado en participar?</p>
-                <a href="mailto:ibga@uis.edu.co" class="btn-main">
-                    <i class="fas fa-envelope-open-text"></i> Contactar al iBGA
+            
+            <div style="flex: 1; min-width: 300px; text-align: center; background: #f0f8ff; padding: 25px; border-radius: 12px; border: 1px solid #d6eaf8;">
+                <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2em;">¿Listo para iniciar?</h3>
+                <p>Diligencia tus datos en nuestro formulario de registro oficial:</p>
+                
+                <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main" style="width: 80%; justify-content: center; margin-bottom: 15px;">
+                    <i class="fas fa-edit"></i> Llenar Formulario
+                </a>
+                
+                <p style="font-size: 0.9em; margin-bottom: 5px;">¿Tienes dudas adicionales?</p>
+                <a href="mailto:ibga@uis.edu.co" class="btn-secondary">
+                    <i class="fas fa-envelope"></i> Contactar al iBGA
                 </a>
             </div>
         </div>
