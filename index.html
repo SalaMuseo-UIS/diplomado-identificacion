@@ -12,11 +12,11 @@
     <style>
         :root {
             --primary-color: #1a5276;       /* Azul Institucional */
-            --primary-dark: #123b55;        /* Azul más oscuro para hover */
+            --primary-dark: #123b55;        
             --secondary-color: #27ae60;     /* Verde Agrosavia */
-            --secondary-dark: #1e8449;      /* Verde más oscuro */
-            --accent-bg: #f8f9fa;           /* Fondo gris muy claro */
-            --text-main: #34495e;           /* Texto principal */
+            --secondary-dark: #1e8449;      
+            --accent-bg: #f8f9fa;           
+            --text-main: #34495e;           
             --white: #ffffff;
             --shadow: 0 4px 6px rgba(0,0,0,0.1);
             --transition: all 0.3s ease;
@@ -37,21 +37,21 @@
             display: flex; 
             justify-content: center; 
             align-items: center;
-            gap: 40px; 
-            padding: 15px 5%; 
+            gap: 50px; 
+            padding: 20px 5%; 
             background: var(--white); 
             flex-wrap: wrap;
             border-bottom: 4px solid var(--secondary-color);
         }
         .logos-header img { 
-            height: 80px; 
+            height: 90px; 
             width: auto; 
             object-fit: contain;
             transition: transform 0.3s;
         }
         .logos-header img:hover { transform: scale(1.05); }
 
-        /* --- Hero Section (Banner) --- */
+        /* --- Hero Section --- */
         .hero {
             position: relative;
             background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(39, 174, 96, 0.75)), 
@@ -65,7 +65,7 @@
         }
         .hero h1 { 
             font-size: 2.8em; 
-            max-width: 900px; 
+            max-width: 950px; 
             margin: 0 auto 20px auto; 
             font-weight: 700;
             line-height: 1.2;
@@ -86,7 +86,7 @@
         /* --- Contenedor Principal --- */
         .container { 
             max-width: 1100px; 
-            margin: -60px auto 40px; /* Sube sobre el hero */
+            margin: -60px auto 40px; 
             padding: 50px; 
             background: var(--white); 
             border-radius: 12px; 
@@ -132,10 +132,10 @@
             border-radius: 50%;
         }
 
-        /* --- Tarjetas de Módulos (Grid Mejorado) --- */
+        /* --- Tarjetas de Módulos --- */
         .module-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 25px; 
         }
         .module-card { 
@@ -157,8 +157,17 @@
         .module-card h4 { 
             margin: 10px 0; 
             color: var(--primary-color); 
-            font-size: 1.3em; 
+            font-size: 1.25em; 
             font-weight: 700;
+        }
+        .module-content ul {
+            padding-left: 20px;
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .module-content li {
+            margin-bottom: 5px;
         }
         .hour-tag { 
             display: inline-block;
@@ -168,7 +177,7 @@
             border-radius: 20px; 
             font-size: 0.8em; 
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         /* --- Tablas --- */
@@ -245,7 +254,6 @@
             border-left: 5px solid #ffc107;
             margin-top: 30px;
         }
-        .obs-box p { margin: 10px 0; }
 
         /* --- Footer --- */
         footer { 
@@ -256,7 +264,6 @@
             margin-top: 80px; 
             font-size: 0.95em;
         }
-        footer strong { color: var(--white); font-size: 1.1em; }
 
         /* --- Responsive --- */
         @media (max-width: 768px) { 
@@ -284,61 +291,90 @@
 
     <div class="container">
         
-        <h2 class="section-title">Objetivos del Programa</h2>
+        <h2 class="section-title">Objetivos y Alcance</h2>
+        [cite_start]<p>Proporcionar a los participantes una comprensión integral para la detección y diagnóstico fitosanitario[cite: 58], combinando técnicas morfológicas clásicas con biotecnología moderna. [cite_start]El curso busca fortalecer capacidades para una toma de decisiones efectiva en el sector agrícola[cite: 82].</p>
         <ul class="info-list">
-            <li><i class="fas fa-microscope"></i> Proveer bases científicas sólidas para comprender la interacción compleja entre insectos-plaga, patógenos y sus hospedantes.</li>
-            <li><i class="fas fa-dna"></i> Explicar conceptos de taxonomía integrativa, contrastando métodos de identificación convencionales vs. moleculares.</li>
-            <li><i class="fas fa-vial"></i> Desarrollar habilidades técnicas prácticas en PCR, Barcoding y diagnóstico fitonematológico de precisión.</li>
+            <li><i class="fas fa-microscope"></i> Comprender la interacción entre insectos-plaga, patógenos y sus hospedantes.</li>
+            [cite_start]<li><i class="fas fa-dna"></i> Implementar taxonomía integrativa: morfología, biología y herramientas moleculares (PCR, Secuenciación)[cite: 79].</li>
+            <li><i class="fas fa-vial"></i> Desarrollar habilidades prácticas en laboratorios de alta tecnología (UIS Guatiguará y AGROSAVIA).</li>
         </ul>
 
         <h2 class="section-title">Metodología y Duración</h2>
-        <p>El diplomado tiene una intensidad total de <strong>120 horas</strong>. Su modalidad es <strong>principalmente virtual</strong>, permitiendo flexibilidad para profesionales y estudiantes.</p>
+        <p>El diplomado tiene una intensidad total de <strong>120 horas</strong>. [cite_start]Su modalidad es <strong>principalmente virtual</strong> (Plataforma Moodle UIS) para componentes teóricos y actividades interactivas[cite: 270, 272].</p>
         <div class="obs-box" style="border-left-color: var(--secondary-color); background: #e8f8f5;">
-            <p><strong><i class="fas fa-info-circle"></i> Nota sobre prácticas:</strong> Las sesiones prácticas presenciales en el Parque Tecnológico Guatiguará (UIS) y C.I. La Suiza (AGROSAVIA) son de carácter <strong>opcional</strong>, diseñadas para reforzar las destrezas de laboratorio.</p>
+            <p><strong><i class="fas fa-flask"></i> Componente Práctico Presencial (Opcional):</strong> Se ofrece la opción de asistir a laboratorios especializados en el Parque Tecnológico Guatiguará (Laboratorio iBGA y GECT II) y C.I. [cite_start]La Suiza, para reforzar destrezas en manejo de equipos y muestras[cite: 274, 276].</p>
         </div>
 
-        <h2 class="section-title">Estructura Curricular</h2>
+        <h2 class="section-title">Estructura Curricular Detallada</h2>
         <div class="module-grid">
             <div class="module-card">
-                <span class="hour-tag">30 HORAS</span>
+                <span class="hour-tag">15 HORAS</span>
                 <h4>Módulo 1: Introducción a la detección</h4>
-                <p>Taxonomía integrativa y comparación de métodos diagnósticos modernos.</p>
+                <div class="module-content">
+                    <ul>
+                        <li>Concepto de taxonomía integrativa.</li>
+                        [cite_start]<li>Métodos convencionales vs. moleculares/genómicos[cite: 301].</li>
+                        <li>Principios de muestreo y colecta en campo.</li>
+                        <li>Importancia de la identificación para manejo y cuarentena.</li>
+                    </ul>
+                </div>
                 <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                <small><strong>Docentes:</strong><br>Claudia Holguín, PhD.<br>Sergio A. Marchant, PhD.</small>
+                <small><strong>Docentes:</strong> Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</small>
             </div>
             <div class="module-card">
-                <span class="hour-tag">30 HORAS</span>
+                <span class="hour-tag">35 HORAS</span>
                 <h4>Módulo 2: Hongos fitopatógenos</h4>
-                <p>Micología agrícola avanzada y técnicas de extracción de ADN fúngico.</p>
+                <div class="module-content">
+                    <ul>
+                        <li>Micología agrícola y ciclos de vida.</li>
+                        [cite_start]<li>Pruebas de patogenicidad (Postulados de Koch)[cite: 301].</li>
+                        <li>Extracción de ADN fúngico y PCR convencional.</li>
+                        <li>Secuenciación (Sanger y Nanoporo) y bioinformática básica.</li>
+                    </ul>
+                </div>
                 <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                <small><strong>Docentes:</strong><br>Yeirme Jaimes, PhD.<br>Sergio A. Marchant, PhD.</small>
+                <small><strong>Docentes:</strong> Yeirme Jaimes, PhD. | Sergio A. Marchant, PhD.</small>
             </div>
             <div class="module-card">
-                <span class="hour-tag">30 HORAS</span>
+                <span class="hour-tag">35 HORAS</span>
                 <h4>Módulo 3: Insectos-plaga</h4>
-                <p>Entomología y uso de Código de barras de ADN (COI) en agricultura.</p>
+                <div class="module-content">
+                    <ul>
+                        <li>Entomología agrícola y morfología externa.</li>
+                        [cite_start]<li>Código de barras de ADN (Gen COI)[cite: 308].</li>
+                        <li>Uso de bases de datos como BOLD Systems.</li>
+                        <li>Cría, montaje y preservación de especímenes.</li>
+                    </ul>
+                </div>
                 <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                <small><strong>Docentes:</strong><br>Mauricio Montes, MSc.<br>Sergio A. Marchant, PhD.</small>
+                <small><strong>Docentes:</strong> Mauricio Montes, MSc. | Sergio A. Marchant, PhD.</small>
             </div>
             <div class="module-card">
-                <span class="hour-tag">30 HORAS</span>
+                <span class="hour-tag">35 HORAS</span>
                 <h4>Módulo 4: Nematodos fitoparásitos</h4>
-                <p>Diagnóstico fitonematológico e identificación molecular de precisión.</p>
+                <div class="module-content">
+                    <ul>
+                        <li>Nematología: anatomía y modos de parasitismo.</li>
+                        [cite_start]<li>Técnicas de extracción de suelo y raíces[cite: 317].</li>
+                        <li>Identificación morfológica y molecular.</li>
+                        <li>Estudio de caso: <em>Globodera</em> en solanáceas.</li>
+                    </ul>
+                </div>
                 <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                <small><strong>Docentes:</strong><br>Claudia Holguín, PhD.<br>Sergio A. Marchant, PhD.</small>
+                <small><strong>Docentes:</strong> Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</small>
             </div>
         </div>
 
         <h2 class="section-title">Certificación</h2>
         <div style="background: #fdfdfd; padding: 20px; border-left: 4px solid var(--primary-color);">
             <ul class="info-list" style="margin-bottom: 0;">
-                <li><i class="fas fa-certificate"></i> <strong>Por Módulo:</strong> Se otorga certificado de asistencia por cada módulo cursado (30h).</li>
-                <li><i class="fas fa-graduation-cap"></i> <strong>Diplomado Completo:</strong> Al completar los 4 módulos, se entrega el certificado de Diplomado (120h) expedido por la UIS.</li>
+                [cite_start]<li><i class="fas fa-certificate"></i> <strong>Por Módulo:</strong> Certificado de cumplimiento por cada módulo aprobado individualmente[cite: 342].</li>
+                [cite_start]<li><i class="fas fa-graduation-cap"></i> <strong>Diplomado Completo:</strong> Al aprobar los 4 módulos, se entrega el certificado de "Diplomado en Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas con un Enfoque Integrativo" (120h)[cite: 341].</li>
             </ul>
         </div>
 
         <h2 class="section-title">Perfil del Aspirante</h2>
-        <p>Dirigido a estudiantes avanzados o graduados de <strong>Biología, Agronomía, Ingeniería Forestal</strong> y profesionales del sector agrícola interesados en actualizarse en sanidad vegetal.</p>
+        <p>Dirigido a profesionales en biología, ecología, agronomía y áreas afines. [cite_start]También a académicos, personal de laboratorio y <strong>estudiantes de pregrado de 8°, 9° o 10° nivel</strong>[cite: 242].</p>
 
         <h2 class="section-title">Inversión (2026)</h2>
         <div class="table-responsive">
@@ -347,7 +383,7 @@
                     <tr>
                         <th>Categoría</th>
                         <th>Diplomado (120h)</th>
-                        <th>Costo Módulo (30h)</th>
+                        <th>Costo Módulo (15h/35h)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -359,10 +395,11 @@
                     <tr>
                         <td>Estudiantes UIS / Personal AGROSAVIA</td>
                         <td class="price-val">$2.800.000</td>
-                        <td class="price-val">$700.000</td>
+                        <td class="price-val">$700.000 (Estudiantes) / $1.000.000 (Agrosavia)*</td>
                     </tr>
                 </tbody>
             </table>
+            <small style="display:block; margin-top:10px; color:#666;">*Verificar tarifas modulares específicas en el flyer oficial.</small>
         </div>
 
         <h2 class="section-title">Material Promocional</h2>
@@ -380,28 +417,33 @@
             <div style="flex: 1; min-width: 300px;">
                 <ul class="info-list">
                     <li><i class="fas fa-calendar-alt"></i> <strong>Fechas:</strong> Pre-inscripciones abiertas Cohorte 2026.</li>
-                    <li><i class="fas fa-file-alt"></i> <strong>Requisitos:</strong> Documento de identidad, soporte de pago y certificado de estudio (si aplica).</li>
+                    [cite_start]<li><i class="fas fa-file-alt"></i> <strong>Documentos:</strong> Copia de documento de identidad y diploma/acta de grado (o certificado de notas para estudiantes >8° sem)[cite: 248].</li>
+                    [cite_start]<li><i class="fas fa-briefcase-medical"></i> <strong>Seguridad Social:</strong> Indispensable ARL/Salud vigente para asistentes a prácticas presenciales[cite: 249].</li>
                 </ul>
             </div>
             <div style="flex: 1; min-width: 300px; text-align: center; background: #f0f8ff; padding: 20px; border-radius: 10px;">
-                <p style="margin-top: 0;">¿Listo para iniciar?</p>
-                <a href="mailto:biosecre@uis.edu.co" class="btn-main">
-                    <i class="fas fa-envelope-open-text"></i> Solicitar Formulario
+                <p style="margin-top: 0;">¿Interesado en participar?</p>
+                <a href="mailto:ibga@uis.edu.co" class="btn-main">
+                    <i class="fas fa-envelope-open-text"></i> Solicitar Información
                 </a>
             </div>
         </div>
 
         <div class="obs-box">
             <h4 style="margin-top:0; color:#856404;"><i class="fas fa-exclamation-triangle"></i> Observaciones Importantes</h4>
-            <p>• La apertura de módulos depende de alcanzar el aforo mínimo de inscritos.</p>
-            <p>• El componente práctico presencial es opcional.</p>
-            <p>• Una vez iniciado el programa académico, no habrá reembolsos de dinero.</p>
+            [cite_start]<p>• El inicio está sujeto a la conformación del grupo mínimo requerido[cite: 24].</p>
+            <p>• La opción presencial es un complemento valioso pero no obligatorio para la certificación.</p>
+            <p>• No se realizan reembolsos una vez iniciado el programa.</p>
         </div>
 
         <h2 class="section-title">Contacto</h2>
         <div style="text-align: center; font-size: 1.1em;">
             <p><strong>Escuela de Biología - Universidad Industrial de Santander</strong></p>
-            <p><i class="fas fa-envelope" style="color: var(--secondary-color);"></i> biosecre@uis.edu.co &nbsp; | &nbsp; <i class="fas fa-phone" style="color: var(--secondary-color);"></i> (7) 6344000 Ext. 2354</p>
+            <p>
+                <i class="fas fa-envelope" style="color: var(--secondary-color);"></i> 
+                <a href="mailto:ibga@uis.edu.co" style="color: inherit; text-decoration: none; font-weight: bold;">ibga@uis.edu.co</a>
+            </p>
+            <p><i class="fas fa-phone" style="color: var(--secondary-color);"></i> (7) 6344000 Ext. 2354</p>
         </div>
 
     </div>
