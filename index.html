@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplomado Identificación Insectos-Plaga y Patógenos | UIS - AGROSAVIA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5276; /* Azul Institucional */
+            --secondary-color: #28b463; /* Verde Agro */
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        
+        /* Logos y Header */
+        .logos-header {
+            display: flex; justify-content: space-around; align-items: center;
+            padding: 20px; background: var(--white); flex-wrap: wrap;
+        }
+        .logos-header img { height: 70px; margin: 10px; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 2.5em; margin-bottom: 20px; }
+        .btn-register {
+            background-color: var(--secondary-color); color: white; padding: 15px 30px;
+            text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.2em;
+            transition: 0.3s;
+        }
+        .btn-register:hover { background-color: #1e8449; transform: scale(1.05); }
+
+        /* Secciones */
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .section-title { border-left: 5px solid var(--secondary-color); padding-left: 15px; color: var(--primary-color); margin-bottom: 30px; }
+
+        /* Módulos (Estilo Tarjetas) */
+        .grid-modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .module-card { background: var(--light-bg); padding: 20px; border-radius: 8px; border-top: 4px solid var(--primary-color); }
+        .module-card h4 { color: var(--primary-color); margin-top: 0; }
+
+        /* Info Box */
+        .info-box { background: var(--primary-color); color: white; padding: 30px; border-radius: 8px; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+        .info-item i { font-size: 2em; margin-bottom: 10px; color: var(--secondary-color); }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+            td { display: block; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logos-header">
+        <img src="images/logo-uis.png" alt="UIS">
+        <img src="images/logo-escuela-biologia.png" alt="Escuela de Biología">
+        <img src="images/logo-agrosavia.png" alt="AGROSAVIA">
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Diplomado en Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas</h1>
+            <p>Un enfoque integrativo para los retos del sector agrícola actual.</p>
+            <br><br>
+            <a href="#inscripcion" class="btn-register">Pre-inscríbete aquí</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Presentación</h2>
+        <p>Este diplomado nace de la alianza estratégica entre la <strong>Universidad Industrial de Santander (UIS)</strong> y <strong>AGROSAVIA</strong>, buscando fortalecer las capacidades técnicas de profesionales y estudiantes en el diagnóstico preciso de amenazas fitosanitarias.</p>
+
+        <h2 class="section-title">¿Por qué elegir este diplomado?</h2>
+        <ul>
+            <li>Acceso a infraestructura de alta tecnología en el <strong>Parque Tecnológico Guatiguará</strong>.</li>
+            <li>Enfoque integrativo: desde la morfología hasta técnicas moleculares avanzadas.</li>
+            <li>Certificación de alta calidad por la Escuela de Biología UIS.</li>
+        </ul>
+
+        <div class="info-box">
+            <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <p><strong>Inicio</strong><br>Julio 2025</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <p><strong>Duración</strong><br>120 Horas</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Lugar</strong><br>UIS Guatiguará / Remoto</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Estructura Curricular (Modular)</h2>
+        <div class="grid-modules">
+            <div class="module-card">
+                <h4>Módulo 1: Entomología</h4>
+                <p>Identificación taxonómica y sistemática de insectos de importancia agrícola.</p>
+            </div>
+            <div class="module-card">
+                <h4>Módulo 2: Fitopatología</h4>
+                <p>Detección y diagnóstico de hongos, bacterias y virus patógenos.</p>
+            </div>
+            <div class="module-card">
+                <h4>Módulo 3: Herramientas Moleculares</h4>
+                <p>Aplicación de PCR, secuenciación y bioinformática en el diagnóstico.</p>
+            </div>
+        </div>
+
+        <h2 id="inscripcion" class="section-title">Información de Inscripción</h2>
+        <p>Para la primera cohorte 2025, el proceso de selección se basará en el perfil profesional y académico de los aspirantes.</p>
+        <p><strong>Costo:</strong> Consultar según perfil (Estudiante/Profesional/Convenio).</p>
+        <div style="text-align: center;">
+            <a href="mailto:biosecre@uis.edu.co" class="btn-register" style="background-color: var(--primary-color);">Solicitar información técnica</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Universidad Industrial de Santander - Escuela de Biología</p>
+        <p>Bucaramanga, Santander, Colombia</p>
+    </footer>
+
+</body>
+</html>
