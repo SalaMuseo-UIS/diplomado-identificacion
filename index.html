@@ -11,186 +11,150 @@
             --secondary-color: #27ae60; 
             --white: #ffffff;
             --text-dark: #2c3e50;
-            --bg-light: #f4f7f6;
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); line-height: 1.6; background-color: var(--bg-light); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); line-height: 1.6; background-color: #f4f7f6; }
         
-        /* Cabecera de Logos */
         .logos-header {
             display: flex; justify-content: space-around; align-items: center;
             padding: 15px; background: var(--white); flex-wrap: wrap;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logos-header img { height: 70px; margin: 10px; }
+        .logos-header img { height: 65px; margin: 10px; }
 
-        /* Hero Section */
+        /* HERO con imagen local */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                        url('https://cdn.pixabay.com/photo/2016/11/19/15/40/cacao-1840003_1280.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('images/fondo.jpg'); /* ASEGÚRATE DE SUBIR ESTA IMAGEN */
             background-size: cover; background-position: center;
             background-attachment: fixed;
             color: white; padding: 100px 20px; text-align: center;
         }
-        .hero h1 { font-size: 2.3em; max-width: 950px; margin: 0 auto 15px auto; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+        .hero h1 { font-size: 2.2em; max-width: 900px; margin: 0 auto 15px auto; }
         .hero p { font-size: 1.3em; background: rgba(39, 174, 96, 0.85); display: inline-block; padding: 8px 25px; border-radius: 30px; }
 
-        .container { max-width: 1000px; margin: 30px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
+        .container { max-width: 1000px; margin: 30px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
         
         .section-title { 
             border-left: 6px solid var(--secondary-color); 
             padding-left: 15px; color: var(--primary-color); 
-            margin: 40px 0 20px 0; text-transform: uppercase; font-size: 1.5em; font-weight: bold;
+            margin: 40px 0 20px 0; text-transform: uppercase; font-size: 1.4em;
         }
 
-        h3 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 35px; }
-
-        /* Listas e Info */
-        .info-list { list-style: none; padding: 0; }
-        .info-list li { margin-bottom: 12px; padding-left: 35px; position: relative; }
-        .info-list li i { position: absolute; left: 0; color: var(--secondary-color); top: 4px; font-size: 1.2em; }
-
-        /* Módulos */
+        .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .module-card { 
-            background: #fdfdfd; padding: 20px; border-radius: 10px; 
-            margin-bottom: 20px; border: 1px solid #eee; border-left: 6px solid var(--primary-color);
+            background: #fdfdfd; padding: 20px; border-radius: 10px; border: 1px solid #eee; border-top: 5px solid var(--primary-color);
         }
-        .module-card h4 { margin: 0 0 10px 0; color: var(--primary-color); }
+        .hour-tag { color: var(--secondary-color); font-weight: bold; font-size: 0.9em; display: block; margin-top: 10px; }
 
-        /* Tabla de Inversión */
-        .price-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
-        .price-table th, .price-table td { border: 1px solid #e0e0e0; padding: 15px; text-align: left; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .price-table th, .price-table td { border: 1px solid #eee; padding: 12px; text-align: left; }
         .price-table th { background: var(--primary-color); color: white; }
-        .price-val { font-weight: bold; color: var(--secondary-color); }
 
         .btn-main { 
-            background: var(--secondary-color); color: white; padding: 18px 45px; 
-            text-decoration: none; border-radius: 50px; font-weight: bold; 
-            display: inline-block; margin: 20px 0; transition: 0.3s;
+            background: var(--secondary-color); color: white; padding: 15px 40px; 
+            text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px;
         }
-        .btn-main:hover { background: #1e8449; transform: scale(1.03); }
 
-        .obs-box { background: #fff9e6; padding: 25px; border-radius: 10px; border: 1px solid #ffeeba; font-size: 0.95em; }
+        .flyer-box { background: #eee; padding: 20px; text-align: center; border-radius: 10px; margin: 40px 0; }
+        .pdf-embed { width: 100%; height: 500px; border: none; }
 
-        footer { background: #1a252f; color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
-
-        @media (max-width: 768px) { .hero h1 { font-size: 1.7em; } .container { padding: 20px; } }
+        footer { background: #1a252f; color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
     </style>
 </head>
 <body>
 
     <div class="logos-header">
         <img src="images/logo-uis.png" alt="UIS">
-        <img src="images/logo-escuela-biologia.png" alt="Escuela de Biología UIS">
         <img src="images/logo-agrosavia.png" alt="AGROSAVIA">
     </div>
 
     <header class="hero">
-        <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas con un Enfoque Integrativo</h1>
-        <p>Primera Cohorte 2026</p>
+        <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas</h1>
+        <p>Enfoque Integrativo - Primera Cohorte 2026</p>
     </header>
 
     <div class="container">
         
-        <h2 class="section-title">Objetivos</h2>
-        <ul class="info-list">
-            <li><i class="fas fa-check-circle"></i> Proveer las bases científicas necesarias para comprender la interacción entre insectos-plaga, patógenos y sus hospedantes.</li>
-            <li><i class="fas fa-check-circle"></i> Explicar conceptos de taxonomía integrativa y métodos de identificación convencionales vs. moleculares (PCR, Barcoding).</li>
-            <li><i class="fas fa-check-circle"></i> Desarrollar habilidades en el diagnóstico fitonematológico y micología agrícola avanzada.</li>
-            <li><i class="fas fa-check-circle"></i> Analizar la aplicación de bioinformática básica para la identificación de especies de importancia agrícola.</li>
-        </ul>
+        <h2 class="section-title">Metodología y Duración</h2>
+        <p>El diplomado tiene una intensidad total de <strong>120 horas</strong>. Está estructurado en 4 módulos independientes y complementarios. La modalidad es <strong>principalmente virtual</strong>. Las sesiones prácticas presenciales en los laboratorios de la UIS y AGROSAVIA son de carácter <strong>opcional</strong> para los asistentes.</p>
 
-        <h2 class="section-title">Metodología</h2>
-        <p>El diplomado tiene una duración total de <strong>120 horas</strong>, compuesto por cuatro módulos. Es de modalidad <strong>principalmente virtual</strong> con componentes prácticos presenciales en el Parque Tecnológico Guatiguará (UIS) y C.I. La Suiza (AGROSAVIA).</p>
-        
-        <div class="module-card">
-            <h4>Módulo 1: Introducción a la detección de plagas y enfermedades</h4>
-            <p><strong>Docentes:</strong> Claudia Holguín, PhD. y Sergio A. Marchant, PhD.</p>
-        </div>
-        <div class="module-card">
-            <h4>Módulo 2: Detección de hongos fitopatógenos</h4>
-            <p><strong>Docentes:</strong> Yeirme Jaimes, PhD. y Sergio A. Marchant, PhD.</p>
-        </div>
-        <div class="module-card">
-            <h4>Módulo 3: Detección de insectos-plaga</h4>
-            <p><strong>Docentes:</strong> Mauricio Montes, MSc. y Sergio A. Marchant, PhD.</p>
-        </div>
-        <div class="module-card">
-            <h4>Módulo 4: Detección de nematodos fitoparásitos</h4>
-            <p><strong>Docentes:</strong> Claudia Holguín, PhD. y Sergio A. Marchant, PhD.</p>
+        <div class="module-grid">
+            <div class="module-card">
+                <h4>Módulo 1: Introducción a la detección</h4>
+                <p>Taxonomía integrativa y métodos moleculares vs. convencionales.</p>
+                <span class="hour-tag"><i class="far fa-clock"></i> 30 Horas</span>
+            </div>
+            <div class="module-card">
+                <h4>Módulo 2: Detección de hongos</h4>
+                <p>Micología agrícola y técnicas de PCR aplicadas.</p>
+                <span class="hour-tag"><i class="far fa-clock"></i> 30 Horas</span>
+            </div>
+            <div class="module-card">
+                <h4>Módulo 3: Detección de insectos</h4>
+                <p>Entomología y Código de Barras de ADN (COI).</p>
+                <span class="hour-tag"><i class="far fa-clock"></i> 30 Horas</span>
+            </div>
+            <div class="module-card">
+                <h4>Módulo 4: Detección de nematodos</h4>
+                <p>Diagnóstico fitonematológico e identificación molecular.</p>
+                <span class="hour-tag"><i class="far fa-clock"></i> 30 Horas</span>
+            </div>
         </div>
 
-        <h2 class="section-title">Dirigido a:</h2>
-        <p>Estudiantes avanzados o profesionales graduados de <strong>Biología, Agronomía, Ingeniería Forestal</strong> y áreas afines interesadas en la sanidad vegetal y diagnóstico integrativo.</p>
+        <h2 class="section-title">Certificación</h2>
+        <p><i class="fas fa-certificate"></i> Se otorgará una <strong>Certificación de Asistencia por cada Módulo</strong> cursado (intensidad de 30h c/u).</p>
+        <p><i class="fas fa-graduation-cap"></i> Los participantes que completen satisfactoriamente los <strong>cuatro módulos</strong> recibirán el certificado de <strong>Diplomado completo (120 horas)</strong> emitido por la Universidad Industrial de Santander.</p>
 
-        <h2 class="section-title">Inversión (Cohorte 2026)</h2>
+        <h2 class="section-title">Inversión</h2>
         <table class="price-table">
             <thead>
                 <tr>
                     <th>Categoría</th>
-                    <th>Diplomado Completo</th>
-                    <th>Costo por Módulo</th>
+                    <th>Diplomado (120h)</th>
+                    <th>Módulo (30h)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Público General / Egresados UIS</td>
-                    <td class="price-val">$3.000.000</td>
-                    <td class="price-val">$800.000</td>
+                    <td>$3.000.000</td>
+                    <td>$800.000</td>
                 </tr>
                 <tr>
                     <td>Estudiantes UIS / Personal AGROSAVIA</td>
-                    <td class="price-val">$2.800.000</td>
-                    <td class="price-val">$700.000</td>
+                    <td>$2.800.000</td>
+                    <td>$700.000</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 class="section-title">Horario y Lugar</h2>
-        <ul class="info-list">
-            <li><i class="fas fa-clock"></i> <strong>Horario:</strong> Sesiones sincrónicas virtuales (Horario por confirmar).</li>
-            <li><i class="fas fa-map-marker-alt"></i> <strong>Prácticas:</strong> Sedes UIS Guatiguará y AGROSAVIA La Suiza.</li>
-        </ul>
+        <h2 class="section-title">Flyer Informativo</h2>
+        <div class="flyer-box">
+            <p>Puedes visualizar o descargar el folleto completo aquí:</p>
+            <iframe src="Diplomado_Flyer.pdf" class="pdf-embed"></iframe>
+            <br>
+            <a href="Diplomado_Flyer.pdf" download class="btn-main" style="background: var(--primary-color);">Descargar Flyer PDF</a>
+        </div>
 
-        <h2 class="section-title">Fechas Importantes</h2>
-        <ul class="info-list">
-            <li><i class="fas fa-calendar-alt"></i> <strong>Pre-inscripciones:</strong> Abiertas para primer semestre 2026.</li>
-            <li><i class="fas fa-play"></i> <strong>Inicio de clases:</strong> Sujeto a conformación de cupo mínimo.</li>
-        </ul>
-
-        <h2 class="section-title">Certificado</h2>
-        <p>Se otorga certificado del Diplomado a los participantes con una asistencia superior al <strong>80%</strong> y que cumplan con los requisitos evaluativos de la Universidad Industrial de Santander.</p>
-
-        <h2 class="section-title">Formas de Pago</h2>
-        <p>Mediante recibo de recaudo UIS cancelable en bancos (Bancolombia, BBVA, Banco de Bogotá, Davivienda) o pago electrónico PSE. Es obligatorio enviar soporte de pago al correo de contacto.</p>
-
-        <h2 class="section-title">Inscripción</h2>
-        <ul class="info-list">
-            <li><i class="fas fa-file-pdf"></i> Documento de identidad escaneado.</li>
-            <li><i class="fas fa-user-graduate"></i> Certificado de estudio (para estudiantes activos).</li>
-            <li><i class="fas fa-edit"></i> Diligenciar el formulario de pre-inscripción.</li>
-        </ul>
-
+        <h2 class="section-title">Pre-Inscripción</h2>
         <div style="text-align: center;">
-            <a href="mailto:biosecre@uis.edu.co" class="btn-main">FORMULARIO DE PRE-INSCRIPCIÓN</a>
+            <p>Para reservar su cupo, por favor envíe sus datos al correo institucional:</p>
+            <a href="mailto:biosecre@uis.edu.co" class="btn-main">biosecre@uis.edu.co</a>
         </div>
 
-        <h2 class="section-title">Observaciones</h2>
-        <div class="obs-box">
-            <p>• La Universidad se reserva el derecho de postergar el inicio según la acogida de la convocatoria.</p>
-            <p>• Una vez iniciado el programa no se realizarán reembolsos de matrícula.</p>
-            <p>• La anulación de la inscripción debe informarse antes del inicio de clases.</p>
+        <h2 class="section-title">Observaciones Importantes</h2>
+        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; font-size: 0.9em;">
+            <p>• El componente práctico presencial en Guatiguará y La Suiza es <strong>opcional</strong>.</p>
+            <p>• La apertura de cada módulo está sujeta a un cupo mínimo de inscritos.</p>
+            <p>• No se realizan devoluciones una vez iniciado el programa académico.</p>
         </div>
-
-        <h2 class="section-title">Más Información</h2>
-        <p><strong>Escuela de Biología – UIS</strong></p>
-        <p><i class="fas fa-envelope"></i> biosecre@uis.edu.co</p>
-        <p><i class="fas fa-phone"></i> (7) 6344000 Ext. 2354</p>
 
     </div>
 
     <footer>
-        <p><strong>Alianza Estratégica UIS - AGROSAVIA</strong> | 2026</p>
+        <p><strong>Alianza UIS - AGROSAVIA</strong> | Facultad de Ciencias - Escuela de Biología</p>
+        <p>Bucaramanga, Colombia - 2026</p>
     </footer>
 
 </body>
