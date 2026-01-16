@@ -7,86 +7,72 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a5276; /* Azul Institucional UIS */
-            --secondary-color: #27ae60; /* Verde AGROSAVIA */
+            --primary-color: #1a5276; 
+            --secondary-color: #27ae60; 
             --white: #ffffff;
             --text-dark: #2c3e50;
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); line-height: 1.6; background-color: #f9f9f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); line-height: 1.6; background-color: #f0f2f5; }
         
-        /* Cabecera de Logos */
         .logos-header {
             display: flex; justify-content: space-around; align-items: center;
             padding: 15px; background: var(--white); flex-wrap: wrap;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logos-header img { height: 65px; margin: 10px; }
+        .logos-header img { height: 70px; margin: 10px; }
 
-        /* Hero Section - Imagen temática de Cacao/Agricultura Tropical */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1570586414604-098520287413?q=80&w=2000&auto=format&fit=crop'); 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://cdn.pixabay.com/photo/2016/11/19/15/40/cacao-1840003_1280.jpg'); 
             background-size: cover; background-position: center;
-            color: white; padding: 100px 20px; text-align: center;
+            background-attachment: fixed;
+            color: white; padding: 120px 20px; text-align: center;
         }
-        .hero h1 { font-size: 2.4em; max-width: 950px; margin: 0 auto 15px auto; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.3em; font-weight: 400; background: rgba(39, 174, 96, 0.7); display: inline-block; padding: 5px 20px; border-radius: 20px; }
+        .hero h1 { font-size: 2.5em; max-width: 950px; margin: 0 auto 15px auto; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+        .hero p { font-size: 1.4em; font-weight: 400; background: rgba(39, 174, 96, 0.85); display: inline-block; padding: 8px 25px; border-radius: 30px; }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
         
         .section-title { 
             border-left: 6px solid var(--secondary-color); 
             padding-left: 15px; color: var(--primary-color); 
-            margin: 40px 0 25px 0; text-transform: uppercase; font-size: 1.4em;
+            margin: 40px 0 20px 0; text-transform: uppercase; font-size: 1.5em; font-weight: bold;
         }
 
-        /* Info Resumen */
-        .info-grid { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-            gap: 20px; margin-bottom: 40px;
-        }
-        .info-card { 
-            background: var(--white); padding: 25px; text-align: center; 
-            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-bottom: 4px solid var(--secondary-color);
-        }
-        .info-card i { font-size: 2.2em; color: var(--secondary-color); margin-bottom: 15px; }
-        .info-card h5 { margin: 5px 0; color: var(--primary-color); font-size: 1.1em; }
+        h3 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 35px; }
 
-        /* Estructura Modular */
-        .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .module-item { 
-            background: var(--white); padding: 25px; border-radius: 12px; 
-            border-top: 6px solid var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        .module-card { 
+            background: #fdfdfd; padding: 25px; border-radius: 12px; 
+            margin-bottom: 25px; border: 1px solid #eee; border-left: 6px solid var(--primary-color);
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
         }
-        .module-num { color: var(--secondary-color); font-weight: bold; font-size: 0.85em; }
-        .module-item h4 { margin: 10px 0; color: var(--primary-color); min-height: 4.5em; display: flex; align-items: center; }
-        .module-desc { font-size: 0.95em; color: #555; margin-bottom: 15px; }
-        .docentes-box { font-size: 0.85em; background: #eef7f1; padding: 12px; border-radius: 8px; border-left: 3px solid var(--secondary-color); }
+        .module-card h4 { margin-top: 0; color: var(--primary-color); font-size: 1.2em; }
 
-        /* Tabla de Inversión */
-        .table-responsive { overflow-x: auto; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; background: white; }
-        th { background: var(--primary-color); color: white; padding: 15px; text-align: left; }
-        td { padding: 15px; border-bottom: 1px solid #eee; }
-        .price { font-weight: bold; color: var(--secondary-color); font-size: 1.1em; }
+        .info-list { list-style: none; padding: 0; }
+        .info-list li { margin-bottom: 12px; padding-left: 35px; position: relative; }
+        .info-list li i { position: absolute; left: 0; color: var(--secondary-color); top: 4px; font-size: 1.2em; }
 
-        /* Botón de Registro */
-        .action-area { text-align: center; margin-top: 50px; background: #eef2f5; padding: 40px; border-radius: 15px; }
-        .btn-inscripcion { 
-            background: var(--secondary-color); color: white; padding: 18px 45px; 
+        .price-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 1em; }
+        .price-table th, .price-table td { border: 1px solid #e0e0e0; padding: 15px; text-align: left; }
+        .price-table th { background: var(--primary-color); color: white; text-transform: uppercase; font-size: 0.9em; }
+        .price-val { font-weight: bold; color: var(--secondary-color); font-size: 1.1em; }
+
+        .btn-main { 
+            background: var(--secondary-color); color: white; padding: 20px 50px; 
             text-decoration: none; border-radius: 50px; font-weight: bold; 
-            font-size: 1.2em; transition: 0.3s; display: inline-block;
+            display: inline-block; margin: 30px 0; transition: 0.4s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
         }
-        .btn-inscripcion:hover { background: #1e8449; transform: scale(1.05); }
+        .btn-main:hover { background: #1e8449; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4); }
 
-        footer { background: #1a252f; color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
+        .obs-box { background: #fff9e6; padding: 25px; border-radius: 10px; font-size: 0.95em; border: 1px solid #ffeeba; color: #856404; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.7em; }
-            .logos-header img { height: 50px; }
+        footer { background: #1a252f; color: white; text-align: center; padding: 50px 20px; margin-top: 80px; }
+
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 1.8em; } 
+            .container { padding: 20px; margin: 10px; }
         }
     </style>
 </head>
@@ -99,7 +85,7 @@
     </div>
 
     <header class="hero">
-        <div class="container">
+        <div class="container-hero">
             <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas con un Enfoque Integrativo</h1>
             <p>Primera Cohorte 2026</p>
         </div>
@@ -107,104 +93,99 @@
 
     <div class="container">
         
-        <div class="info-grid">
-            <div class="info-card">
-                <i class="fas fa-history"></i>
-                <h5>Intensidad</h5>
-                <p>120 Horas</p>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-laptop-house"></i>
-                <h5>Modalidad</h5>
-                <p>Principalmente Virtual</p>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-map-marked-alt"></i>
-                <h5>Prácticas</h5>
-                <p>UIS Guatiguará y AGROSAVIA La Suiza</p>
-            </div>
+        <h2 class="section-title">Objetivos</h2>
+        <ul class="info-list">
+            <li><i class="fas fa-check-circle"></i> Proveer las bases científicas para comprender la interacción entre insectos-plaga, patógenos y sus hospedantes.</li>
+            <li><i class="fas fa-check-circle"></i> Explicar conceptos fundamentales de taxonomía integrativa y comparar métodos de identificación convencionales vs. moleculares.</li>
+            <li><i class="fas fa-check-circle"></i> Describir los principios técnicos de herramientas moleculares (PCR, Barcoding) aplicadas al diagnóstico agrícola contemporáneo.</li>
+            <li><i class="fas fa-check-circle"></i> Analizar técnicas de diagnóstico fitonematológico y micología agrícola avanzada en entornos de alta tecnología.</li>
+        </ul>
+
+        <h2 class="section-title">Metodología</h2>
+        <p>El diplomado tiene una duración total de <strong>120 horas</strong>. Está diseñado de forma modular, con componentes teóricos virtuales y prácticas de laboratorio presenciales en infraestructuras de vanguardia.</p>
+
+        <div class="module-card">
+            <h4>Módulo 1: Introducción a la detección de plagas y enfermedades</h4>
+            <p><strong>Docentes responsables:</strong> Claudia Holguín, PhD. y Sergio A. Marchant, PhD.</p>
+            <p>Temáticas: Taxonomía integrativa, bases de datos biológicas y criterios de selección de métodos diagnósticos.</p>
         </div>
 
-        <h2 class="section-title">Contenido Programático</h2>
-        <div class="modules-grid">
-            <div class="module-item">
-                <span class="module-num">MÓDULO 1</span>
-                <h4>Introducción a la detección de plagas y enfermedades agrícolas</h4>
-                <p class="module-desc">Taxonomía integrativa, métodos de identificación convencionales VS. moleculares.</p>
-                <div class="docentes-box">
-                    <strong>Docentes:</strong><br>Claudia Holguín, PhD. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
-
-            <div class="module-item">
-                <span class="module-num">MÓDULO 2</span>
-                <h4>Detección de hongos causantes de enfermedades en cultivos</h4>
-                <p class="module-desc">Micología agrícola, técnicas de extracción de ADN fúngico y PCR.</p>
-                <div class="docentes-box">
-                    <strong>Docentes:</strong><br>Yeirme Jaimes, PhD. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
-
-            <div class="module-item">
-                <span class="module-num">MÓDULO 3</span>
-                <h4>Detección de insectos-plaga en cultivos agrícolas</h4>
-                <p class="module-desc">Entomología agrícola, código de barras de ADN (COI) y bioinformática.</p>
-                <div class="docentes-box">
-                    <strong>Docentes:</strong><br>Mauricio Montes, MSc. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
-
-            <div class="module-item">
-                <span class="module-num">MÓDULO 4</span>
-                <h4>Detección de nematodos fitoparásitos en cultivos</h4>
-                <p class="module-desc">Nematología, diagnóstico fitonematológico e identificación molecular.</p>
-                <div class="docentes-box">
-                    <strong>Docentes:</strong><br>Claudia Holguín, PhD. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
+        <div class="module-card">
+            <h4>Módulo 2: Detección de hongos fitopatógenos</h4>
+            <p><strong>Docentes responsables:</strong> Yeirme Jaimes, PhD. y Sergio A. Marchant, PhD.</p>
+            <p>Temáticas: Micología agrícola especializada, protocolos de extracción de ADN fúngico y optimización de PCR.</p>
         </div>
 
-        <h2 class="section-title">Inversión y Costos</h2>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Categoría de Inscripción</th>
-                        <th>Diplomado Completo</th>
-                        <th>Costo por Módulo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Egresados UIS y Público en General</td>
-                        <td><span class="price">$3.000.000</span></td>
-                        <td><span class="price">$800.000</span></td>
-                    </tr>
-                    <tr>
-                        <td>Estudiantes UIS y Personal AGROSAVIA</td>
-                        <td><span class="price">$2.800.000</span></td>
-                        <td><span class="price">$700.000</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="module-card">
+            <h4>Módulo 3: Detección de insectos-plaga</h4>
+            <p><strong>Docentes responsables:</strong> Mauricio Montes, MSc. y Sergio A. Marchant, PhD.</p>
+            <p>Temáticas: Entomología sistemática, Código de barras de ADN (COI) y análisis bioinformático básico.</p>
         </div>
 
-        <div class="action-area">
-            <h3>¿Listo para iniciar su formación técnica?</h3>
-            <p>Las pre-inscripciones para la cohorte 2026 ya están abiertas.</p>
-            <br>
-            <a href="mailto:biosecre@uis.edu.co" class="btn-inscripcion">Escríbenos para Pre-inscripción</a>
+        <div class="module-card">
+            <h4>Módulo 4: Detección de nematodos fitoparásitos</h4>
+            <p><strong>Docentes responsables:</strong> Claudia Holguín, PhD. y Sergio A. Marchant, PhD.</p>
+            <p>Temáticas: Morfometría de nematodos, extracción y diagnóstico molecular de precisión.</p>
         </div>
+
+        <h2 class="section-title">Certificación</h2>
+        <p>La Universidad Industrial de Santander otorgará el certificado de aprobación del Diplomado a quienes cumplan con una asistencia superior al <strong>80%</strong> y completen satisfactoriamente las evaluaciones prácticas.</p>
+
+        <h2 class="section-title">Inversión (Cohorte 2026)</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Categoría de Inscrito</th>
+                    <th>Diplomado Completo</th>
+                    <th>Costo por Módulo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Egresados UIS y Público en General</td>
+                    <td class="price-val">$3.000.000</td>
+                    <td class="price-val">$800.000</td>
+                </tr>
+                <tr>
+                    <td>Comunidad UIS y Personal AGROSAVIA</td>
+                    <td class="price-val">$2.800.000</td>
+                    <td class="price-val">$700.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Formas de Pago</h2>
+        <p>El pago se realiza mediante recibo de recaudo generado por la UIS, cancelable en bancos como: <strong>Bancolombia, Banco de Bogotá, Davivienda, BBVA</strong> o vía PSE electrónico.</p>
+
+        <h2 class="section-title">Inscripción</h2>
+        <ul class="info-list">
+            <li><i class="fas fa-file-alt"></i> Diligenciar el formulario de pre-inscripción en línea.</li>
+            <li><i class="fas fa-id-card"></i> Adjuntar fotocopia del documento de identidad.</li>
+            <li><i class="fas fa-university"></i> Certificado de estudio o polígrafo (si aplica para descuento de estudiante).</li>
+        </ul>
+
+        <div style="text-align: center;">
+            <a href="mailto:biosecre@uis.edu.co" class="btn-main">PRE-INSCRÍBETE AQUÍ</a>
+        </div>
+
+        <h2 class="section-title">Observaciones</h2>
+        <div class="obs-box">
+            <p>• La Universidad se reserva el derecho de postergar el inicio del curso si no se alcanza el aforo mínimo de inscritos.</p>
+            <p>• Una vez iniciado el programa, la Universidad no realizará reembolsos de matrícula.</p>
+            <p>• El envío del formulario implica el compromiso de participación para la generación de recibos institucionales.</p>
+        </div>
+
+        <h2 class="section-title">Más Información</h2>
+        <p><strong>Escuela de Biología – Universidad Industrial de Santander</strong></p>
+        <p><i class="fas fa-envelope"></i> <strong>Correo:</strong> biosecre@uis.edu.co</p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Parque Tecnológico Guatiguará / Sede Principal UIS</p>
 
     </div>
 
     <footer>
-        <div class="container">
-            <p><strong>Alianza Universidad Industrial de Santander & AGROSAVIA</strong></p>
-            <p>Escuela de Biología - Facultad de Ciencias</p>
-            <p>Bucaramanga, Santander, Colombia | 2026</p>
-            <p style="font-size: 0.85em; opacity: 0.7; margin-top: 15px;">Contacto: biosecre@uis.edu.co</p>
-        </div>
+        <p><strong>Alianza Estratégica UIS - AGROSAVIA</strong></p>
+        <p>Facultad de Ciencias - Escuela de Biología</p>
+        <p>Bucaramanga, Santander, Colombia | 2026</p>
     </footer>
 
 </body>
