@@ -46,6 +46,17 @@
         .metodologia-item { background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; border-bottom: 4px solid var(--primary-color); }
         .metodologia-item i { font-size: 2em; color: var(--secondary-color); margin-bottom: 15px; }
 
+        /* Estilos Cronograma */
+        .cronograma-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
+        .grupo-card { background: #fff; border: 1px solid #e1e8ed; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .grupo-card h3 { color: var(--primary-color); margin-top: 0; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        .fecha-item { margin-bottom: 10px; display: flex; justify-content: space-between; border-bottom: 1px dashed #eee; padding-bottom: 5px; }
+        .fecha-label { font-weight: 600; color: #555; }
+        
+        .practico-conjunto { background: #e8f6f3; border: 2px solid var(--secondary-color); padding: 30px; border-radius: 12px; margin-top: 30px; }
+        .distribucion-practica { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px; }
+        .dia-box { background: white; padding: 15px; border-radius: 8px; border-left: 4px solid var(--secondary-color); }
+
         .practica-box { background: #f0fdf4; border-left: 6px solid var(--secondary-color); padding: 30px; border-radius: 0 12px 12px 0; margin: 30px 0; }
         .ubicacion-tag { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-weight: 600; font-size: 1.05em; }
         .ubicacion-tag i { color: var(--accent-color); }
@@ -100,6 +111,42 @@
         <p>Fortalecer capacidades para una toma de decisiones efectiva en el sector agrícola, combinando morfología clásica con biotecnología avanzada.</p>
         <p>Promover la articulación entre el conocimiento científico y las necesidades del sector productivo y la academia contribuyendo a la sanidad vegetal y la competitividad del agro colombiano.</p>
 
+        <h2 class="section-title">Cronograma de Actividades 2026 (Fechas Tentativas)</h2>
+        <p style="font-style: italic;"><i class="fas fa-info-circle"></i> El inicio de cada ciclo está sujeto al cumplimiento del cupo mínimo de inscritos.</p>
+        
+        <div class="cronograma-grid">
+            <div class="grupo-card">
+                <h3>Grupo 1 (Marzo)</h3>
+                <p><small>Diseñado para quienes inician con el periodo académico regular.</small></p>
+                <div class="fecha-item"><span class="fecha-label">Límite de pago:</span> 10 de marzo</div>
+                <div class="fecha-item"><span class="fecha-label">Inicio virtual:</span> 15 de marzo</div>
+                <div class="fecha-item"><span class="fecha-label">Formación:</span> 8 semanas</div>
+                <div class="fecha-item"><span class="fecha-label">Sesiones de dudas:</span> 26 mar / 23 abr</div>
+            </div>
+
+            <div class="grupo-card">
+                <h3>Grupo 2 (Abril)</h3>
+                <p><small>Para quienes requieren formalización adicional o nivelación intensiva.</small></p>
+                <div class="fecha-item"><span class="fecha-label">Límite de pago:</span> 10 de abril</div>
+                <div class="fecha-item"><span class="fecha-label">Inicio virtual:</span> 15 de abril</div>
+                <div class="fecha-item"><span class="fecha-label">Formación:</span> 8 semanas</div>
+                <div class="fecha-item"><span class="fecha-label">Sesiones de dudas:</span> 30 abr / 28 may</div>
+            </div>
+        </div>
+
+        <div class="practico-conjunto">
+            <h3 style="margin-top:0; color: var(--primary-color);"><i class="fas fa-microscope"></i> Componente Práctico Presencial Conjunto</h3>
+            <p>6 días de inmersión total en laboratorios especializados para ambos grupos.</p>
+            <p><strong>Fechas:</strong> Del 22 al 27 de junio <small>(Posterior al cierre teórico del Grupo 2)</small></p>
+            
+            <div class="distribucion-practica">
+                <div class="dia-box"><strong>Día 1 y 2:</strong> Módulo de Hongos (Aislamiento y Patogenicidad)</div>
+                <div class="dia-box"><strong>Día 3 y 4:</strong> Módulo de Insectos (Taxonomía y Cría)</div>
+                <div class="dia-box"><strong>Día 5 y 6:</strong> Módulo de Nematodos (Extracción e Identificación)</div>
+            </div>
+            <p style="margin-top:15px; font-size: 0.9em;"><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Instalaciones de AGROSAVIA (C.I. La Suiza / P.T. Guatiguará) y laboratorios UIS.</p>
+        </div>
+
         <h2 class="section-title">Metodología y Duración</h2>
         <div class="metodologia-grid">
             <div class="metodologia-item">
@@ -118,13 +165,6 @@
                 <i class="fas fa-th-large"></i>
                 <p><strong>Inscripción</strong><br>Total o por Módulo</p>
             </div>
-        </div>
-
-        <div class="practica-box">
-            <h4 style="margin: 0; color: var(--secondary-color);"><i class="fas fa-flask"></i> Componente Práctico (Opcional)</h4>
-            <p>Sesiones presenciales para reforzar destrezas experimentales con equipos de última tecnología en:</p>
-            <div class="ubicacion-tag"><i class="fas fa-map-marker-alt"></i> Parque Tecnológico Guatiguará (Laboratorios UIS y AGROSAVIA) - <strong>Piedecuesta, Santander.</strong></div>
-            <div class="ubicacion-tag"><i class="fas fa-map-marker-alt"></i> C.I. La Suiza (AGROSAVIA) - <strong>Rionegro, Santander.</strong></div>
         </div>
 
         <h2 class="section-title">Plan de Estudios Detallado</h2>
@@ -161,9 +201,9 @@
                 <ul>
                     <li>Toma y procesamiento de muestras.</li>
                     <li>Aislamiento y cultivo de hongos fitopatógenos.</li>
-                    <li>Identificación morfológica y molecular (extracción de ADN- PCR-introducción al análisis in silico secuencias identificación).</li>
+                    <li>Identificación morfológica y molecular.</li>
                     <li>Realización guiada de pruebas de patogenicidad.</li>
-                    <li>Estudio de caso: <em>Lasiodiplodia</em>, integrando métodos morfológicos y moleculares.</li>
+                    <li>Estudio de caso: <em>Lasiodiplodia</em>.</li>
                 </ul>
             </div>
             <div class="docentes-info"><strong>Docentes:</strong> Yeirme Jaimes, PhD. | Sergio A. Marchant, PhD.</div>
@@ -178,8 +218,6 @@
                     <li>Entomología agrícola: principales órdenes y familias de importancia económica en Colombia.</li>
                     <li>Ciclos de vida, biología y hábitos.</li>
                     <li>Identificación morfológica a nivel de orden, familia, género.</li>
-                    <li>Métodos de colecta y preparación especímenes para identificación.</li>
-                    <li>Pruebas de laboratorio para cría e identificación.</li>
                     <li>Técnicas de identificación molecular: Código de barras de ADN (Gen COI).</li>
                     <li>Uso de bases de datos genéticos como BOLD Systems y bioinformática.</li>
                 </ul>
@@ -188,8 +226,6 @@
                     <li>Toma y procesamiento de muestras.</li>
                     <li>Montaje y preservación de especímenes de referencia.</li>
                     <li>Identificación morfológica con estereoscopios y claves.</li>
-                    <li>Establecimiento de crías de insectos para estudio de ciclo de vida e identificación.</li>
-                    <li>Amplificación por PCR del gen COI y visualización en gel de agarosa.</li>
                     <li>Estudio de caso: Moscas de la fruta.</li>
                 </ul>
             </div>
@@ -206,23 +242,20 @@
                     <li>Técnicas de extracción de nematodos del suelo y tejido vegetal.</li>
                     <li>Pruebas de patogenicidad con nematodos.</li>
                     <li>Identificación molecular (marcadores ribosomales/COI).</li>
-                    <li>Manejo y análisis de datos genéticos de nematodos.</li>
                 </ul>
                 <h5><i class="fas fa-flask"></i> Práctica (Opcional):</h5>
                 <ul>
                     <li>Toma y procesamiento de muestras.</li>
                     <li>Preparación de nematodos para observación microscópica.</li>
                     <li>Identificación morfológica con microscopios ópticos.</li>
-                    <li>Pruebas de patogenicidad con nematodos.</li>
-                    <li>Identificación molecular: Extracción ADN, amplificación PCR, introducción al análisis de secuencias.</li>
-                    <li>Estudio de caso: <em>Globodera</em> en solanáceas, integrando extracción y biología molecular.</li>
+                    <li>Estudio de caso: <em>Globodera</em> en solanáceas.</li>
                 </ul>
             </div>
             <div class="docentes-info"><strong>Docentes:</strong> Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</div>
         </div>
 
         <h2 class="section-title">Perfil del Aspirante</h2>
-        <p>Dirigido a profesionales, académicos, personal de laboratorio y <strong>estudiantes de pregrado de 8°, 9° o 10° nivel</strong> en Biología, Ecología, Agronomía y áreas afines (Institutos, Centros de Investigación, Universidades, ONGs y laboratorios del sector agroindustrial y ambiental).</p>
+        <p>Dirigido a profesionales, académicos, personal de laboratorio y <strong>estudiantes de pregrado de 8°, 9° o 10° nivel</strong> en Biología, Ecología, Agronomía y áreas afines.</p>
 
         <h2 class="section-title">Inversión (2026)</h2>
         <div style="overflow-x:auto;">
