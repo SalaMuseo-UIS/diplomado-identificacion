@@ -11,445 +11,227 @@
 
     <style>
         :root {
-            --primary-color: #1a5276;       /* Azul Institucional */
-            --secondary-color: #27ae60;     /* Verde Agrosavia */
+            --primary-color: #1a5276;
+            --secondary-color: #27ae60;
+            --accent-color: #e74c3c;
             --white: #ffffff;
             --text-main: #34495e;           
-            --bg-light: #ecf0f1;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --bg-light: #f4f7f6;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
-        body { 
-            font-family: 'Open Sans', sans-serif; 
-            margin: 0; 
-            color: var(--text-main); 
-            line-height: 1.6; 
-            background-color: var(--bg-light); 
-        }
-
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: var(--text-main); line-height: 1.6; background-color: var(--bg-light); }
         h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; }
 
-        /* --- Cabecera de Logos --- */
         .logos-header {
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            gap: 50px; 
-            padding: 20px 5%; 
-            background: var(--white); 
-            flex-wrap: wrap;
+            display: flex; justify-content: center; align-items: center; gap: 40px; 
+            padding: 20px 5%; background: var(--white); flex-wrap: wrap;
             border-bottom: 4px solid var(--secondary-color);
         }
-        .logos-header img { 
-            height: 90px; 
-            width: auto; 
-            object-fit: contain;
-            transition: transform 0.3s;
-        }
-        .logos-header img:hover { transform: scale(1.05); }
+        .logos-header img { height: 85px; width: auto; object-fit: contain; }
 
-        /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(39, 174, 96, 0.75)), 
-                        url('images/fondo.jpg'); 
-            background-size: cover; 
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--white); 
-            padding: 120px 20px; 
-            text-align: center;
+            background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(39, 174, 96, 0.8)), url('images/fondo.jpg'); 
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: var(--white); padding: 100px 20px; text-align: center;
         }
-        .hero h1 { 
-            font-size: 2.8em; 
-            max-width: 950px; 
-            margin: 0 auto 20px auto; 
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-        .hero-badge { 
-            font-size: 1.2em; 
-            background: var(--secondary-color); 
-            color: white;
-            display: inline-block; 
-            padding: 10px 30px; 
-            border-radius: 50px; 
-            font-weight: 600;
-        }
+        .hero h1 { font-size: 2.5em; max-width: 950px; margin: 0 auto 20px; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
 
-        /* --- Contenedor Principal --- */
-        .container { 
-            max-width: 1100px; 
-            margin: -60px auto 40px; 
-            padding: 50px; 
-            background: var(--white); 
-            border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 10;
-        }
-        
-        .section-title { 
-            display: flex;
-            align-items: center;
-            color: var(--primary-color); 
-            margin: 50px 0 30px 0; 
-            font-size: 1.8em; 
-            font-weight: 700;
-        }
-        .section-title::before {
-            content: '';
-            display: block;
-            width: 8px;
-            height: 40px;
-            background: var(--secondary-color);
-            margin-right: 15px;
-            border-radius: 4px;
-        }
+        .container { max-width: 1100px; margin: -50px auto 40px; padding: 40px; background: var(--white); border-radius: 15px; box-shadow: var(--shadow); position: relative; z-index: 10; }
 
-        /* --- Listas --- */
-        .info-list { list-style: none; padding: 0; }
-        .info-list li { 
-            margin-bottom: 15px; 
-            padding-left: 40px; 
-            position: relative; 
-            font-size: 1.05em;
-        }
-        .info-list li i { 
-            position: absolute; 
-            left: 0; top: 4px; 
-            color: var(--secondary-color); 
-            font-size: 1.3em; 
-        }
+        .section-title { display: flex; align-items: center; color: var(--primary-color); margin: 45px 0 25px; font-size: 1.8em; font-weight: 700; }
+        .section-title::before { content: ''; width: 8px; height: 35px; background: var(--secondary-color); margin-right: 15px; border-radius: 4px; }
 
-        /* --- Módulos Detallados --- */
-        .module-grid { 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 30px; 
-        }
-        .module-card { 
-            background: var(--white); 
-            padding: 30px; 
-            border-radius: 12px; 
-            border-top: 5px solid var(--primary-color);
-            box-shadow: var(--shadow);
-            border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;
-        }
-        .module-card h4 { 
-            margin: 10px 0; color: var(--primary-color); font-size: 1.4em; font-weight: 700;
-        }
-        .module-content h5 {
-            color: var(--secondary-color);
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1em;
-            text-transform: uppercase;
-            font-weight: 700;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .module-content ul {
-            padding-left: 20px;
-            font-size: 0.95em;
-            color: #444;
-            margin-bottom: 15px;
-        }
-        .module-content li { margin-bottom: 8px; }
-        
-        .hour-tag { 
-            display: inline-block;
-            background: #eaf2f8; 
-            color: var(--primary-color); 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 0.8em; 
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .docentes-info {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 20px;
-        }
+        .metodologia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .metodologia-item { background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; border-bottom: 4px solid var(--primary-color); }
+        .metodologia-item i { font-size: 2em; color: var(--secondary-color); margin-bottom: 15px; }
 
-        /* --- Tablas --- */
-        .table-responsive { overflow-x: auto; }
-        .price-table { 
-            width: 100%; border-collapse: collapse; margin: 20px 0; 
-            background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow);
-        }
-        .price-table th, .price-table td { padding: 18px 20px; text-align: left; border: 1px solid #eee; }
-        .price-table th { background: var(--primary-color); color: var(--white); text-transform: uppercase; font-size: 0.9em; }
-        .price-val { font-weight: 700; color: var(--secondary-color); font-size: 1.1em; }
+        .practica-box { background: #f0fdf4; border-left: 6px solid var(--secondary-color); padding: 30px; border-radius: 0 12px 12px 0; margin: 30px 0; }
+        .ubicacion-tag { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-weight: 600; font-size: 1.05em; }
+        .ubicacion-tag i { color: var(--accent-color); }
 
-        /* --- Botones --- */
-        .btn-container { text-align: center; margin: 30px 0; }
-        .btn-main { 
-            background: var(--secondary-color); color: white; padding: 16px 40px; 
-            text-decoration: none; border-radius: 50px; font-weight: 600; 
-            display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        }
+        .module-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #eee; border-top: 6px solid var(--primary-color); margin-bottom: 30px; }
+        .hour-tag { background: #eaf2f8; color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: 700; display: inline-block; margin-bottom: 15px; }
+        .module-content h5 { color: var(--secondary-color); text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; margin: 20px 0 10px; }
+        .docentes-info { background: #f9f9f9; padding: 12px; border-radius: 8px; font-size: 0.9em; color: #555; margin-top: 20px; }
+
+        .price-table { width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+        .price-table th { background: var(--primary-color); color: white; padding: 18px; text-align: left; }
+        .price-table td { padding: 18px; border: 1px solid #eee; }
+        .price-val { color: var(--secondary-color); font-weight: 700; }
+
+        .btn-main { background: var(--secondary-color); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
         .btn-main:hover { background: #1e8449; transform: translateY(-3px); }
-        .btn-download { background: var(--primary-color); box-shadow: 0 4px 15px rgba(26, 82, 118, 0.4); }
-        .btn-download:hover { background: #123b55; }
-        .btn-secondary {
-            background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);
-            padding: 10px 25px; border-radius: 50px; font-weight: 600; text-decoration: none;
-            display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; font-size: 0.9em;
-        }
-        .btn-secondary:hover { background: var(--primary-color); color: white; }
 
-        /* --- Extras --- */
-        .flyer-box { text-align: center; padding: 30px; background: #f8f9fa; border-radius: 12px; border: 2px dashed #bdc3c7; }
-        .flyer-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 20px; }
-        .obs-box { background: #fff8e1; padding: 25px; border-radius: 8px; border-left: 5px solid #ffc107; margin-top: 30px; }
+        .obs-box { background: #fffde7; padding: 25px; border-radius: 10px; border-left: 5px solid #fbc02d; margin-top: 40px; }
+        footer { background: #2c3e50; color: #bdc3c7; text-align: center; padding: 50px 20px; margin-top: 60px; }
 
-        /* --- Footer --- */
-        footer { background: #2c3e50; color: #bdc3c7; text-align: center; padding: 60px 20px; margin-top: 80px; }
-
-        @media (max-width: 768px) { 
-            .container { padding: 25px; width: 90%; }
-            .logos-header { gap: 20px; }
-            .logos-header img { height: 60px; }
-            .btn-main { padding: 14px 25px; font-size: 0.9em; }
-        }
+        @media (max-width: 768px) { .container { width: 92%; padding: 25px; } .hero h1 { font-size: 1.8em; } }
     </style>
 </head>
 <body>
 
     <div class="logos-header">
-        <img src="images/logo-uis.png" alt="Universidad Industrial de Santander">
-        <img src="images/logo-escuela-biologia.png" alt="Escuela de Biología UIS">
+        <img src="images/logo-uis.png" alt="UIS">
+        <img src="images/logo-escuela-biologia.png" alt="Biología UIS">
         <img src="images/logo-agrosavia.png" alt="AGROSAVIA">
     </div>
 
     <header class="hero">
         <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas</h1>
-        <span class="hero-badge">Enfoque Integrativo • Primera Cohorte 2026</span>
-        <br><br>
+        <p style="font-size: 1.2em; margin-bottom: 30px;">Enfoque Integrativo • Primera Cohorte 2026</p>
         <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main">
             <i class="fas fa-clipboard-check"></i> Realizar Pre-inscripción
         </a>
     </header>
 
     <div class="container">
-        
-        <h2 class="section-title">Objetivos del Diplomado</h2>
-        <p>Proporcionar a los participantes las herramientas conceptuales y prácticas necesarias para la detección y diagnóstico fitosanitario.</p>
-        <p>Fortalecer capacidades para una toma de decisiones efectiva en el sector agrícola, combinando morfología clásica con biotecnología avanzada.</p>
-        <p>Promover la articulación entre el conocimiento científico y las necesidades del sector productivo y la academia contribuyendo a la sanidad vegetal y la competitividad del agro colombiano.</p>
-
         <h2 class="section-title">Metodología y Duración</h2>
-        <p>El diplomado tiene una intensidad total de <strong>120 horas</strong> dividido en cuatro módulos. Su modalidad es <strong>virtual</strong> con componentes teóricos asincrónicos, disponibles 24/7 para otorgar mayor flexibilidad y autonomía. También se tendrán sesiones de <strong>mentoría sincrónicas y foros</strong> con el propósito de resolver inquietudes. La inscripción puede realizarse por módulo o por la totalidad del diplomado</p>
-        <div class="obs-box" style="border-left-color: var(--secondary-color); background: #e8f8f5;">
-            <p><strong><i class="fas fa-flask"></i> Componente Práctico (Opcional):</strong> Las sesiones prácticas presenciales se realizarán en el Parque Tecnológico Guatiguará (Laboratorios UIS y AGROSAVIA) y C.I. La Suiza están diseñadas para reforzar destrezas experimentales con equipos de última tecnología. Aunque opcionales, estas sesiones son altamente recomendadas.</p>
+        <div class="metodologia-grid">
+            <div class="metodologia-item">
+                <i class="fas fa-clock"></i>
+                <p><strong>120 Horas</strong><br>Intensidad total</p>
+            </div>
+            <div class="metodologia-item">
+                <i class="fas fa-laptop"></i>
+                <p><strong>Virtual</strong><br>Asincrónico 24/7</p>
+            </div>
+            <div class="metodologia-item">
+                <i class="fas fa-users"></i>
+                <p><strong>Sincrónico</strong><br>Mentorías y Foros</p>
+            </div>
+            <div class="metodologia-item">
+                <i class="fas fa-th-large"></i>
+                <p><strong>Inscripción</strong><br>Total o por Módulo</p>
+            </div>
+        </div>
+
+        <div class="practica-box">
+            <h4 style="margin: 0; color: var(--secondary-color);"><i class="fas fa-flask"></i> Componente Práctico (Opcional)</h4>
+            <p>Sesiones presenciales para reforzar destrezas experimentales con equipos de última tecnología en:</p>
+            <div class="ubicacion-tag"><i class="fas fa-map-marker-alt"></i> Parque Tecnológico Guatiguará (Laboratorios UIS y AGROSAVIA) - <strong>Piedecuesta, Santander.</strong></div>
+            <div class="ubicacion-tag"><i class="fas fa-map-marker-alt"></i> C.I. La Suiza (AGROSAVIA) - <strong>Rionegro, Santander.</strong></div>
         </div>
 
         <h2 class="section-title">Plan de Estudios Detallado</h2>
-        <div class="module-grid">
-            
-            <div class="module-card">
-                <span class="hour-tag">15 HORAS</span>
-                <h4>Módulo 1: Introducción a la detección de plagas y enfermedades agrícolas</h4>
-                <div class="module-content">
-                    <h5><i class="fas fa-book-open"></i> Componente Teórico:</h5>
-                    <ul>
-                        <li>Principales grupos: insectos-plaga, hongos, bacterias y nematodos.</li>
-                        <li>Concepto de <strong>taxonomía integrativa</strong>: convergencia de datos morfológicos, biológicos y moleculares.</li>
-                        <li>Métodos de identificación convencionales vs. enfoques moleculares y genómicos.</li>
-                        <li>Daños y síntomas causados por insectos, hongos, bacterias y nematodos en plantas.</li>
-                        <li>Principios de muestreo y colecta de especímenes en campo.</li>
-                    </ul>
-                </div>
-                <div class="docentes-info">
-                    <strong><i class="fas fa-chalkboard-teacher"></i> Docentes:</strong> Yeirme Y. Jaimes, PhD. | Jose Mauricio, MSc. | Claudia Holguín, PhD. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
 
-            <div class="module-card">
-                <span class="hour-tag">35 HORAS</span>
-                <h4>Módulo 2: Detección de hongos fitopatógenos</h4>
-                <div class="module-content">
-                    <h5><i class="fas fa-book-open"></i> Contenido Teórico:</h5>
-                    <ul>
-                        <li>Introducción a la Micología agrícola, ciclos de vida y epidemiología de hongos fitopatógenos.</li>
-                        <li>Métodos para la identificación morfológica de hongos.</li>
-                        <li>Principios y aplicación de los Postulados de Koch (Pruebas de patogenicidad).</li>
-                        <li>Técnicas moleculares: Extracción ADN fúngico, PCR convencional y multiplex.</li>
-                        <li>Introducción a secuenciación (Sanger y Nanoporo) y bioinformática básica para análisis de secuencias.</li>
-                    </ul>
-                    <h5><i class="fas fa-vial"></i> Práctica (Opcional):</h5>
-                    <ul>
-                        <li>Toma y procesamiento de muestras.</li>
-                        <li>Aislamiento y cultivo de hongos fitopatógenos.</li>
-                        <li>Identificación morfológica y molecular (extracción de ADN- PCR-introducción al análisis in silico secuencias identificación.</li>
-                        <li>Realización guiada de pruebas de patogenicidad.</li>
-                        <li>Estudio de caso: <em>Lasiodiplodia</em>, integrando métodos morfológicos y moleculares.</li>
-                    </ul>
-                </div>
-                <div class="docentes-info">
-                    <strong><i class="fas fa-chalkboard-teacher"></i> Docentes:</strong> Yeirme Jaimes, PhD. | Sergio A. Marchant, PhD.
-                </div>
+        <div class="module-card">
+            <span class="hour-tag">15 HORAS</span>
+            <h4>Módulo 1: Introducción a la detección de plagas y enfermedades agrícolas</h4>
+            <div class="module-content">
+                <h5><i class="fas fa-book-open"></i> Componente Teórico:</h5>
+                <ul>
+                    <li>Principales grupos: insectos-plaga, hongos, bacterias y nematodos.</li>
+                    <li>Concepto de <strong>taxonomía integrativa</strong>: convergencia de datos morfológicos, biológicos y moleculares.</li>
+                    <li>Métodos de identificación convencionales vs. enfoques moleculares y genómicos.</li>
+                    <li>Daños y síntomas causados por insectos, hongos, bacterias y nematodos en plantas.</li>
+                    <li>Principios de muestreo y colecta de especímenes en campo.</li>
+                </ul>
             </div>
-
-            <div class="module-card">
-                <span class="hour-tag">35 HORAS</span>
-                <h4>Módulo 3: Detección de insectos-plaga en cultivos</h4>
-                <div class="module-content">
-                    <h5><i class="fas fa-book-open"></i> Contenido Teórico:</h5>
-                    <ul>
-                        <li>Entomología agrícola: principales órdenes y familias de importancia económica en Colombia.</li>
-                        <li>Ciclos de vida, biología y hábitos.</li>
-                        <li>Identificación morfológica a nivel de orden, familia, género.</li>
-                        <li>Métodos de colecta y preparación especímenes para identificación.</li>
-                        <li>Pruebas de laboratorio para cría e identificación.</li>
-                        <li>Técnicas de identificación molecular: Código de barras de ADN (Gen COI).</li>
-                        <li>Uso de bases de datos genéticos como BOLD Systems y bioinformática.</li>
-                    </ul>
-                    <h5><i class="fas fa-vial"></i> Práctica (Opcional):</h5>
-                    <ul>
-                        <li>Toma y procesamiento de muestras.</li>
-                        <li>Montaje y preservación de especímenes de referencia.</li>
-                        <li>Identificación morfológica con estereoscopios y claves.</li>
-                        <li>Establecimiento de crías de insectos para estudio de ciclo de vida e identificación.</li>
-                        <li>Amplificación por PCR del gen COI y visualización en gel de agarosa.</li>
-                        <li>Estudio de caso: Moscas de la fruta.</li>
-                    </ul>
-                </div>
-                <div class="docentes-info">
-                    <strong><i class="fas fa-chalkboard-teacher"></i> Docentes:</strong> Mauricio Montes, MSc. | Claudia Holguín, PhD.| Sergio A. Marchant, PhD.
-                </div>
-            </div>
-
-            <div class="module-card">
-                <span class="hour-tag">35 HORAS</span>
-                <h4>Módulo 4: Detección de nematodos fitoparásitos</h4>
-                <div class="module-content">
-                    <h5><i class="fas fa-book-open"></i> Contenido Temático:</h5>
-                    <ul>
-                        <li>Nematología agrícola: morfología, biología y modos de parasitismo en plantas.</li>
-                        <li>Técnicas de extracción de nematodos del suelo y tejido vegetal.</li>
-                        <li>Pruebas de patogenicidad con nematodos.</li>
-                        <li>Identificación molecular (marcadores ribosomales/COI).</li>
-                        <li>Manejo y análisis de datos genéticos de nematodos.</li>
-                    </ul>
-                    <h5><i class="fas fa-vial"></i> Práctica (Opcional):</h5>
-                    <ul>
-                        <li>Toma y procesamiento de muestras.</li>
-                        <li>Preparación de nematodos para observación microscópica.</li>
-                        <li>Identificación morfológica con microscopios ópticos.</li>
-                        <li>Pruebas de patogenicidad con nematodos.</li>
-                        <li>Identificación molecular: Extracción ADN, amplificación PCR, introducción al análisis de secuencias.</li>
-                        <li>Estudio de caso: <em>Globodera</em> en solanáceas, integrando extracción y biología molecular.</li>
-                    </ul>
-                </div>
-                <div class="docentes-info">
-                    <strong><i class="fas fa-chalkboard-teacher"></i> Docentes:</strong> Claudia Holguín, PhD. | Sergio A. Marchant, PhD.
-                </div>
-            </div>
+            <div class="docentes-info"><strong>Docentes:</strong> Yeirme Y. Jaimes, PhD. | Jose Mauricio, MSc. | Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</div>
         </div>
 
-        <h2 class="section-title">Certificación</h2>
-        <div style="background: #fdfdfd; padding: 20px; border-left: 4px solid var(--primary-color);">
-            <ul class="info-list" style="margin-bottom: 0;">
-                <li><i class="fas fa-certificate"></i> <strong>Por Módulo:</strong> Certificado de cumplimiento por cada módulo aprobado individualmente (indicando intensidad horaria).</li>
-                <li><i class="fas fa-graduation-cap"></i> <strong>Diplomado Completo:</strong> Al aprobar los 4 módulos (120h), se entrega el certificado de "Diplomado en Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas con un Enfoque Integrativo".</li>
-            </ul>
+        <div class="module-card">
+            <span class="hour-tag">35 HORAS</span>
+            <h4>Módulo 2: Detección de hongos fitopatógenos</h4>
+            <div class="module-content">
+                <h5><i class="fas fa-book-open"></i> Contenido Teórico:</h5>
+                <ul>
+                    <li>Introducción a la Micología agrícola, ciclos de vida y epidemiología de hongos fitopatógenos.</li>
+                    <li>Métodos para la identificación morfológica de hongos.</li>
+                    <li>Principios y aplicación de los Postulados de Koch (Pruebas de patogenicidad).</li>
+                    <li>Técnicas moleculares: Extracción ADN fúngico, PCR convencional y multiplex.</li>
+                    <li>Introducción a secuenciación (Sanger y Nanoporo) y bioinformática básica para análisis de secuencias.</li>
+                </ul>
+                <h5><i class="fas fa-flask"></i> Práctica (Opcional):</h5>
+                <ul>
+                    <li>Toma y procesamiento de muestras.</li>
+                    <li>Aislamiento y cultivo de hongos fitopatógenos.</li>
+                    <li>Identificación morfológica y molecular (extracción de ADN- PCR-introducción al análisis in silico secuencias identificación).</li>
+                    <li>Realización guiada de pruebas de patogenicidad.</li>
+                    <li>Estudio de caso: <em>Lasiodiplodia</em>, integrando métodos morfológicos y moleculares.</li>
+                </ul>
+            </div>
+            <div class="docentes-info"><strong>Docentes:</strong> Yeirme Jaimes, PhD. | Sergio A. Marchant, PhD.</div>
         </div>
 
-        <h2 class="section-title">Perfil del Aspirante</h2>
-        <p>Dirigido a profesionales, académicos, personal de laboratorio y <strong>estudiantes de pregrado de 8°, 9° o 10° nivel</strong> en Biología, Ecología, Agronomía y áreas afines (Institutos, Centros de Investigación, Universidades, ONGs y laboratorios del sector agroindustrial y ambiental).</p>
+        <div class="module-card">
+            <span class="hour-tag">35 HORAS</span>
+            <h4>Módulo 3: Detección de insectos-plaga en cultivos</h4>
+            <div class="module-content">
+                <h5><i class="fas fa-book-open"></i> Contenido Teórico:</h5>
+                <ul>
+                    <li>Entomología agrícola: principales órdenes y familias de importancia económica en Colombia.</li>
+                    <li>Ciclos de vida, biología y hábitos.</li>
+                    <li>Identificación morfológica a nivel de orden, familia, género.</li>
+                    <li>Métodos de colecta y preparación especímenes para identificación.</li>
+                    <li>Pruebas de laboratorio para cría e identificación.</li>
+                    <li>Técnicas de identificación molecular: Código de barras de ADN (Gen COI).</li>
+                    <li>Uso de bases de datos genéticos como BOLD Systems y bioinformática.</li>
+                </ul>
+                <h5><i class="fas fa-flask"></i> Práctica (Opcional):</h5>
+                <ul>
+                    <li>Toma y procesamiento de muestras.</li>
+                    <li>Montaje y preservación de especímenes de referencia.</li>
+                    <li>Identificación morfológica con estereoscopios y claves.</li>
+                    <li>Establecimiento de crías de insectos para estudio de ciclo de vida e identificación.</li>
+                    <li>Amplificación por PCR del gen COI y visualización en gel de agarosa.</li>
+                    <li>Estudio de caso: Moscas de la fruta.</li>
+                </ul>
+            </div>
+            <div class="docentes-info"><strong>Docentes:</strong> Mauricio Montes, MSc. | Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</div>
+        </div>
+
+        <div class="module-card">
+            <span class="hour-tag">35 HORAS</span>
+            <h4>Módulo 4: Detección de nematodos fitoparásitos</h4>
+            <div class="module-content">
+                <h5><i class="fas fa-book-open"></i> Contenido Teórico:</h5>
+                <ul>
+                    <li>Nematología agrícola: morfología, biología y modos de parasitismo en plantas.</li>
+                    <li>Técnicas de extracción de nematodos del suelo y tejido vegetal.</li>
+                    <li>Pruebas de patogenicidad con nematodos.</li>
+                    <li>Identificación molecular (marcadores ribosomales/COI).</li>
+                    <li>Manejo y análisis de datos genéticos de nematodos.</li>
+                </ul>
+                <h5><i class="fas fa-flask"></i> Práctica (Opcional):</h5>
+                <ul>
+                    <li>Toma y procesamiento de muestras.</li>
+                    <li>Preparación de nematodos para observación microscópica.</li>
+                    <li>Identificación morfológica con microscopios ópticos.</li>
+                    <li>Pruebas de patogenicidad con nematodos.</li>
+                    <li>Identificación molecular: Extracción ADN, amplificación PCR, introducción al análisis de secuencias.</li>
+                    <li>Estudio de caso: <em>Globodera</em> en solanáceas, integrando extracción y biología molecular.</li>
+                </ul>
+            </div>
+            <div class="docentes-info"><strong>Docentes:</strong> Claudia Holguín, PhD. | Sergio A. Marchant, PhD.</div>
+        </div>
 
         <h2 class="section-title">Inversión (2026)</h2>
-        <div class="table-responsive">
+        <div style="overflow-x:auto;">
             <table class="price-table">
                 <thead>
-                    <tr>
-                        <th>Categoría</th>
-                        <th>Diplomado Completo (120h)</th>
-                        <th>Costo Módulo Individual</th>
-                    </tr>
+                    <tr><th>Categoría</th><th>Diplomado Completo</th><th>Módulo Individual</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Público General / Egresados UIS</td>
-                        <td class="price-val">$3.000.000</td>
-                        <td class="price-val">$1.000.000</td>
-                    </tr>
-                    <tr>
-                        <td>Estudiantes UIS / Personal AGROSAVIA</td>
-                        <td class="price-val">$2.800.000</td>
-                        <td class="price-val">$800.000</td>
-                    </tr>
+                    <tr><td>Público General / Egresados UIS</td><td class="price-val">$3.000.000</td><td class="price-val">$1.000.000</td></tr>
+                    <tr><td>Estudiantes UIS / Personal AGROSAVIA</td><td class="price-val">$2.800.000</td><td class="price-val">$800.000</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="section-title">Material Promocional</h2>
-        <div class="flyer-box">
-            <img src="images/DiplomadoFlyer.png" alt="Flyer Diplomado UIS AGROSAVIA" class="flyer-img">
-            <div class="btn-container">
-                <a href="images/DiplomadoFlyer.png" download class="btn-main btn-download">
-                    <i class="fas fa-download"></i> Descargar Flyer (PNG)
-                </a>
-            </div>
-        </div>
-
-        <h2 class="section-title" id="inscripcion">Proceso de Inscripción</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
-            <div style="flex: 1; min-width: 300px;">
-                <ul class="info-list">
-                    <li><i class="fas fa-calendar-alt"></i> <strong>Fechas:</strong> Pre-inscripciones abiertas Cohorte 2026.</li>
-                    <li><i class="fas fa-file-alt"></i> <strong>Documentos:</strong> Copia de documento de identidad y diploma/acta de grado (o certificado de notas para estudiantes >8° sem).</li>
-                    <li><i class="fas fa-briefcase-medical"></i> <strong>Seguridad Social:</strong> Indispensable afiliación vigente a salud y ARL para asistentes a prácticas presenciales.</li>
-                </ul>
-            </div>
-            
-            <div style="flex: 1; min-width: 300px; text-align: center; background: #f0f8ff; padding: 25px; border-radius: 12px; border: 1px solid #d6eaf8;">
-                <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2em;">¿Listo para iniciar?</h3>
-                <p>Diligencia tus datos en nuestro formulario de registro oficial:</p>
-                
-                <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main" style="width: 80%; justify-content: center; margin-bottom: 15px;">
-                    <i class="fas fa-edit"></i> Llenar Formulario
-                </a>
-                
-                <p style="font-size: 0.9em; margin-bottom: 5px;">¿Tienes dudas adicionales?</p>
-                <a href="mailto:ibga@uis.edu.co" class="btn-secondary">
-                    <i class="fas fa-envelope"></i> Contactar al iBGA
-                </a>
-            </div>
-        </div>
-
         <div class="obs-box">
-            <h4 style="margin-top:0; color:#856404;"><i class="fas fa-exclamation-triangle"></i> Observaciones Importantes</h4>
-            <p>• El inicio está sujeto a la conformación del grupo mínimo requerido para aperturar cada módulo.</p>
-            <p>• La opción presencial es un complemento valioso altamente recomendado pero no obligatorio para la certificación del diplomado.</p>
-            <p>Las fechas del componente práctico se concertarán con los participantes inscritos.</p>
-                <p>El componente práctico de cada módulo tendrá una duración de 2 a 4 días.</p>
-            <p>• No se realizan reembolsos de matrícula una vez iniciado el programa.</p>
+            <h4 style="margin:0;"><i class="fas fa-exclamation-triangle"></i> Observaciones Importantes</h4>
+            <p>• El inicio está sujeto a la conformación del grupo mínimo requerido.</p>
+            <p>• La opción presencial es un complemento valioso altamente recomendado pero no obligatorio.</p>
+            <p>• Las fechas del componente práctico (2 a 4 días) se concertarán con los inscritos.</p>
+            <p>• Indispensable afiliación vigente a salud y ARL para prácticas presenciales.</p>
         </div>
-
-        <h2 class="section-title">Contacto</h2>
-        <div style="text-align: center; font-size: 1.1em;">
-            <p><strong>Escuela de Biología - Universidad Industrial de Santander</strong></p>
-            <p>
-                <i class="fas fa-envelope" style="color: var(--secondary-color);"></i> 
-                <a href="mailto:ibga@uis.edu.co" style="color: inherit; text-decoration: none; font-weight: bold;">ibga@uis.edu.co</a>
-            </p>
-            <p><i class="fas fa-phone" style="color: var(--secondary-color);"></i> (7) 6344000 Ext. 2354</p>
-        </div>
-
     </div>
 
     <footer>
         <p><strong>Alianza Estratégica UIS - AGROSAVIA</strong></p>
-        <p>Facultad de Ciencias - Escuela de Biología | Bucaramanga, Colombia</p>
-        <p style="font-size: 0.8em; opacity: 0.6; margin-top: 20px;">&copy; 2026 Todos los derechos reservados.</p>
+        <p>Escuela de Biología | Bucaramanga, Colombia | ibga@uis.edu.co</p>
     </footer>
-
 </body>
 </html>
