@@ -60,8 +60,19 @@
         .price-table td { padding: 18px; border: 1px solid #eee; }
         .price-val { color: var(--secondary-color); font-weight: 700; }
 
+        /* --- Flyer Section --- */
+        .flyer-box { text-align: center; padding: 30px; background: #f8f9fa; border-radius: 12px; border: 2px dashed #bdc3c7; margin: 40px 0; }
+        .flyer-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 20px; }
+
+        /* --- Botones --- */
         .btn-main { background: var(--secondary-color); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
         .btn-main:hover { background: #1e8449; transform: translateY(-3px); }
+        .btn-download { background: var(--primary-color); margin-top: 10px; }
+        .btn-secondary { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-secondary:hover { background: var(--primary-color); color: white; }
+
+        /* --- Contacto Box --- */
+        .contact-section { text-align: center; background: #f0f8ff; padding: 40px; border-radius: 15px; border: 1px solid #d6eaf8; margin-top: 40px; }
 
         .obs-box { background: #fffde7; padding: 25px; border-radius: 10px; border-left: 5px solid #fbc02d; margin-top: 40px; }
         footer { background: #2c3e50; color: #bdc3c7; text-align: center; padding: 50px 20px; margin-top: 60px; }
@@ -86,6 +97,7 @@
     </header>
 
     <div class="container">
+        
         <h2 class="section-title">Metodología y Duración</h2>
         <div class="metodologia-grid">
             <div class="metodologia-item">
@@ -220,6 +232,27 @@
             </table>
         </div>
 
+        <h2 class="section-title">Material Promocional</h2>
+        <div class="flyer-box">
+            <img src="images/DiplomadoFlyer.png" alt="Flyer Diplomado UIS AGROSAVIA" class="flyer-img">
+            <br>
+            <a href="images/DiplomadoFlyer.png" download class="btn-main btn-download">
+                <i class="fas fa-download"></i> Descargar Flyer (PNG)
+            </a>
+        </div>
+
+        <h2 class="section-title">Contacto y Consultas</h2>
+        <div class="contact-section">
+            <p><strong>Escuela de Biología - Universidad Industrial de Santander</strong></p>
+            <div style="margin: 20px 0;">
+                <a href="mailto:ibga@uis.edu.co" class="btn-secondary">
+                    <i class="fas fa-envelope"></i> ibga@uis.edu.co
+                </a>
+            </div>
+            <p><i class="fas fa-phone" style="color: var(--secondary-color);"></i> (7) 6344000 Ext. 2354</p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Bucaramanga, Santander, Colombia</p>
+        </div>
+
         <div class="obs-box">
             <h4 style="margin:0;"><i class="fas fa-exclamation-triangle"></i> Observaciones Importantes</h4>
             <p>• El inicio está sujeto a la conformación del grupo mínimo requerido.</p>
@@ -231,7 +264,7 @@
 
     <footer>
         <p><strong>Alianza Estratégica UIS - AGROSAVIA</strong></p>
-        <p>Escuela de Biología | Bucaramanga, Colombia | ibga@uis.edu.co</p>
+        <p>Facultad de Ciencias - Escuela de Biología | 2026</p>
     </footer>
 </body>
 </html>
