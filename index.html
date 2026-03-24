@@ -19,7 +19,7 @@
             --bg-light-teal: #e8f4f2;    /* Fondo suave para secciones */
             
             --white: #ffffff;
-            --text-main: #2c3e50;           
+            --text-main: #2c3e50;          
             --text-light: #555555;
             --shadow: 0 8px 20px rgba(0,0,0,0.08);
             --radius-card: 20px;
@@ -103,13 +103,13 @@
         }
 
         .hero-subtitle { 
-            color: #ffffff !important; /* Fuerza el color blanco */
-            font-size: 1.4em;          /* Un poco más grande para mejor lectura */
+            color: #ffffff !important; 
+            font-size: 1.4em; 
             font-weight: 600; 
             margin-bottom: 30px; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra para separarlo del fondo */
-            opacity: 1;                /* Asegura que sea totalmente visible */
-            letter-spacing: 0.5px;     /* Un poco de espacio entre letras */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+            opacity: 1; 
+            letter-spacing: 0.5px; 
         }
 
         /* Botón estilo volante */
@@ -129,6 +129,23 @@
             border: 2px solid white;
         }
         .btn-main:hover { background: white; color: var(--primary-light); transform: translateY(-3px); }
+
+        .btn-pay {
+            background: var(--primary-light);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .btn-pay:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
 
         /* --- CONTENEDOR PRINCIPAL --- */
         .container { 
@@ -174,8 +191,7 @@
         .metodologia-item i { font-size: 2em; color: var(--primary-light); margin-bottom: 15px; }
         .metodologia-item strong { color: var(--primary-dark); display: block; margin-bottom: 5px; }
 
-        /* --- MÓDULOS (ESTILO VOLANTE) --- */
-        /* Replicando el estilo azulito de los módulos del volante */
+        /* --- MÓDULOS --- */
         .module-card { 
             background: white; 
             border-radius: var(--radius-card); 
@@ -219,20 +235,42 @@
             font-style: italic;
         }
 
+        /* --- CAJA BENEFICIO 3+1 --- */
+        .beneficio-box {
+            background: var(--bg-light-teal);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 6px solid var(--accent-lime);
+            margin-bottom: 30px;
+        }
+        .beneficio-box h4 {
+            color: var(--primary-dark);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .beneficio-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .beneficio-box li {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
         /* --- PRECIOS (TABLA MODERNA) --- */
         .price-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 15px; overflow: hidden; border: 1px solid #eee; }
         .price-table th { background: var(--primary-dark); color: white; padding: 20px; text-align: left; font-weight: 600; }
-        .price-table td { padding: 20px; border-bottom: 1px solid #eee; background: white; }
+        .price-table td { padding: 20px; border-bottom: 1px solid #eee; background: white; vertical-align: middle; }
         .price-table tr:last-child td { border-bottom: none; }
         .price-val { color: var(--primary-light); font-weight: 800; font-size: 1.1em; }
 
-        /* --- CRONOGRAMA (ESTILO LIME DEL VOLANTE) --- */
-        /* Aquí usamos el verde lima fuerte para destacar los grupos */
+        /* --- CRONOGRAMA --- */
         .cronograma-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
         
         .grupo-card { 
-            background: var(--accent-lime); /* Fondo verde lima */
-            color: var(--primary-dark);     /* Texto oscuro */
+            background: var(--accent-lime); 
+            color: var(--primary-dark); 
             padding: 30px; 
             border-radius: 20px; 
             box-shadow: 0 5px 15px rgba(159, 203, 61, 0.4);
@@ -292,26 +330,25 @@
         }
 
         .obs-box { 
-            background: #fff9c4; /* Amarillo suave */
+            background: #fff9c4; 
             padding: 25px; 
             border-radius: 15px; 
             border-left: 6px solid #fbc02d; 
             margin-top: 40px; 
         }
 
-       /* --- FOOTER COMPLETO Y CORREGIDO --- */
+        /* --- FOOTER COMPLETO --- */
         footer { 
-            background: var(--primary-dark); /* Aquí recuperamos el fondo verde oscuro */
+            background: var(--primary-dark); 
             color: white; 
             text-align: center; 
             padding: 50px 20px; 
             margin-top: 60px;
-            border-top-right-radius: 80px; /* Detalle curvo de la esquina */
+            border-top-right-radius: 80px; 
         }
 
-        /* Estilo para "Alianza Estratégica..." */
         footer strong {
-            color: var(--accent-lime); /* Verde lima brillante para resaltar */
+            color: var(--accent-lime); 
             font-weight: 800;
             text-transform: uppercase;
             font-size: 1.2em;
@@ -320,9 +357,8 @@
             letter-spacing: 1px;
         }
 
-        /* Estilo para "Facultad de Ciencias..." */
         footer p {
-            color: #ffffff !important; /* Blanco puro para máximo contraste */
+            color: #ffffff !important; 
             margin: 5px 0;
             font-size: 1rem;
             opacity: 0.9;
@@ -353,10 +389,6 @@
             <div class="badge-diplomado">DIPLOMADO</div>
             <h1>Herramientas para la Identificación de Insectos-Plaga y Patógenos en Plantas</h1>
             <p class="hero-subtitle">Enfoque Integrativo • Primera Cohorte 2026</p>
-            
-            <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main">
-                <i class="fas fa-clipboard-check"></i> Realizar Pre-inscripción
-            </a>
         </header>
     </div>
 
@@ -494,16 +526,65 @@
         <p>Dirigido a profesionales, académicos, personal de laboratorio y <strong>estudiantes de pregrado de 8°, 9° o 10° nivel</strong> en Biología, Ecología, Agronomía y áreas afines.</p>
 
         <h2 class="section-title">Inversión (2026)</h2>
+        
+        <div class="beneficio-box">
+            <h4>Costos y Beneficio de Matrícula Gradual (Oferta 3+1)</h4>
+            <p>Para facilitar el ingreso al programa y permitir una gestión financiera más cómoda, contamos con una estrategia de matrícula gradual para el <strong>Público General</strong>:</p>
+            <ul>
+                <li><strong>Pago Modular:</strong> Puedes matricularte de manera independiente en cada módulo a medida que avanza el cronograma ($1.000.000 COP c/u).</li>
+                <li><strong>Beneficio 3+1:</strong> Al completar el pago de los tres primeros módulos ($3.000.000 COP en total), la institución te otorgará el acceso al <strong>cuarto módulo sin costo adicional</strong>, permitiéndote finalizar el diplomado completo.</li>
+            </ul>
+        </div>
+
         <div style="overflow-x:auto;">
             <table class="price-table">
                 <thead>
-                    <tr><th>Categoría</th><th>Diplomado Completo</th><th>Módulo Individual</th></tr>
+                    <tr>
+                        <th>Módulo</th>
+                        <th>Público General / Egresados UIS</th>
+                        <th>Estudiantes UIS / Personal AGROSAVIA</th>
+                        <th>Instrucciones de Pago</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Público General / Egresados UIS</td><td class="price-val">$3.000.000</td><td class="price-val">$1.000.000</td></tr>
-                    <tr><td>Estudiantes UIS / Personal AGROSAVIA</td><td class="price-val">$2.800.000</td><td class="price-val">$800.000</td></tr>
+                    <tr>
+                        <td><strong>Módulo 1:</strong> Introducción a la detección de agentes causales</td>
+                        <td class="price-val">$1.000.000</td>
+                        <td class="price-val">$800.000</td>
+                        <td><a href="instructivo.pdf" download class="btn-pay"><i class="fas fa-file-pdf"></i> Descargar Instructivo</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Módulo 2:</strong> Detección de hongos fitopatógenos</td>
+                        <td class="price-val">$1.000.000</td>
+                        <td class="price-val">$800.000</td>
+                        <td><a href="instructivo.pdf" download class="btn-pay"><i class="fas fa-file-pdf"></i> Descargar Instructivo</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Módulo 3:</strong> Detección de insectos-plaga en cultivos</td>
+                        <td class="price-val">$1.000.000</td>
+                        <td class="price-val">$800.000</td>
+                        <td><a href="instructivo.pdf" download class="btn-pay"><i class="fas fa-file-pdf"></i> Descargar Instructivo</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Módulo 4:</strong> Detección de nematodos fitoparásitos<br><small style="color:var(--text-light); font-weight:normal;">(Gratis con Beneficio 3+1)</small></td>
+                        <td class="price-val">$1.000.000</td>
+                        <td class="price-val">$800.000</td>
+                        <td><a href="instructivo.pdf" download class="btn-pay"><i class="fas fa-file-pdf"></i> Descargar Instructivo</a></td>
+                    </tr>
+                    <tr style="background-color: var(--bg-light-teal);">
+                        <td><strong>Diplomado Completo (Pago Único)</strong></td>
+                        <td class="price-val">$3.000.000</td>
+                        <td class="price-val">$2.800.000</td>
+                        <td><a href="instructivo.pdf" download class="btn-pay"><i class="fas fa-file-pdf"></i> Descargar Instructivo</a></td>
+                    </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://forms.office.com/r/0YjbGS8wVt" target="_blank" class="btn-main" style="padding: 15px 40px; font-size: 1.2em;">
+                <i class="fas fa-clipboard-check"></i> Realizar Pre-inscripción
+            </a>
         </div>
 
         <h2 class="section-title">Cronograma de Actividades 2026</h2>
@@ -511,16 +592,7 @@
         
         <div class="cronograma-grid">
             <div class="grupo-card">
-                <h3>Grupo 1 (Inicio en Marzo)</h3>
-                <div class="fecha-item"><span class="fecha-label">Límite de pago:</span> 16 de marzo</div>
-                <div class="fecha-item"><span class="fecha-label">Inicio virtual:</span> 16 de marzo</div>
-                <div class="fecha-item"><span class="fecha-label">Cierre de curso:</span> 19 de junio</div>
-                <div class="fecha-item"><span class="fecha-label">Sesiones de dudas sincrónicas:</span> 26 mar / 23 abr</div>
-                <div class="fecha-item"><span class="fecha-label">Sesiones de dudas asincrónicas:</span> Foro y correo electrónico</div>
-            </div>
-
-            <div class="grupo-card">
-                <h3>Grupo 2 (Inicio en Abril)</h3>
+                <h3>Inicio Abril</h3>
                 <div class="fecha-item"><span class="fecha-label">Límite de pago:</span> 20 de abril</div>
                 <div class="fecha-item"><span class="fecha-label">Inicio virtual:</span> 20 de abril</div>
                 <div class="fecha-item"><span class="fecha-label">Cierre de curso:</span> 19 de junio</div>
@@ -530,9 +602,9 @@
         </div>
 
         <div class="practico-conjunto">
-            <h3 style="margin-top:0; color: var(--primary-dark);"><i class="fas fa-microscope"></i> Componente Práctico Presencial Conjunto</h3>
-            <p>6 días de inmersión total en laboratorios especializados para ambos grupos.</p>
-            <p><strong>Fechas:</strong> Del 22 al 27 de junio <small>(Posterior al cierre teórico del Grupo 2)</small></p>
+            <h3 style="margin-top:0; color: var(--primary-dark);"><i class="fas fa-microscope"></i> Componente Práctico Presencial</h3>
+            <p>6 días de inmersión total en laboratorios especializados.</p>
+            <p><strong>Fechas:</strong> Del 22 al 27 de junio <small>(Posterior al cierre teórico)</small></p>
             
             <div class="distribucion-practica">
                 <div class="dia-box"><strong>Día 1 y 2:</strong> Módulo de Hongos</div>
